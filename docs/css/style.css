@@ -438,3 +438,20 @@ a:hover {
     padding: 0 var(--space-3);
   }
 }
+/* Logo image styles */
+.logo-img {
+    height: 40px;
+    width: auto;
+    display: block;
+    transition: opacity 0.3s ease;
+}
+
+.logo-img:hover {
+    opacity: 0.85;
+}
+
+@media (max-width: 768px) {
+    .logo-img {
+        height: 32px;
+    }
+}
