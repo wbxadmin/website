@@ -1,130 +1,358 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Vericustos - Post-Quantum Trust Infrastructure">
-    <title>Vericustos - Post-Quantum Trust Infrastructure</title>
-    <link rel="stylesheet" href="./css/style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Vericustos — Distributed Trust for the Post‑Quantum Era</title>
+  <meta name="description" content="Vericustos delivers PQ-native certificates, human attestation, and a developer SDK with a real-time Trust Orb.">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <style>
+    :root{
+      --bg: #0b0f1a; /* deep navy */
+      --card: #0f1524; /* slightly lighter */
+      --muted: #9aa4b2; /* slate */
+      --text: #e7edf5; /* near white */
+      --brand: #6aa0ff; /* cornflower */
+      --brand-2: #86f7d1; /* aqua mint */
+      --accent: #ffe27a; /* soft gold */
+      --danger: #ff7a7a;
+      --ok: #66e0a3;
+      --radius: 14px;
+      --shadow: 0 10px 35px rgba(0,0,0,.35);
+      --container: 1200px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      color: var(--text); background: radial-gradient(1200px 800px at 80% -10%, rgba(134,247,209,.08), transparent 60%),
+                radial-gradient(1000px 700px at 10% -20%, rgba(106,160,255,.12), transparent 60%),
+                var(--bg);
+      line-height:1.6;
+    }
+    a{color:inherit; text-decoration:none}
+    .container{max-width:var(--container); margin:0 auto; padding:0 20px}
+    .btn{display:inline-flex; align-items:center; gap:.6rem; padding:.85rem 1.2rem; border-radius:12px; font-weight:600; letter-spacing:.2px; transition:.2s ease; border:1px solid transparent}
+    .btn-primary{background:linear-gradient(135deg, var(--brand), var(--brand-2)); color:#041423; box-shadow: 0 6px 22px rgba(106,160,255,.35)}
+    .btn-primary:hover{transform:translateY(-1px)}
+    .btn-secondary{background:transparent; border-color:#2f3a53; color:var(--text)}
+    .btn-secondary:hover{border-color:#4b5a7a}
+
+    /* Header */
+    .header{position:sticky; top:0; z-index:40; backdrop-filter:saturate(140%) blur(8px); background:rgba(11,15,26,.6); border-bottom:1px solid rgba(255,255,255,.06)}
+    .nav{display:flex; align-items:center; justify-content:space-between; gap:16px; height:68px}
+    .nav-logo{display:flex; align-items:center; gap:12px; font-weight:800; letter-spacing:.4px}
+    .logo-img{height:30px; width:auto}
+    .brand-word{font-weight:800}
+    .nav-menu{display:flex; gap:18px; align-items:center}
+    .nav-menu a{padding:10px 12px; border-radius:10px; color:var(--muted)}
+    .nav-menu a.active, .nav-menu a:hover{background:rgba(134,247,209,.08); color:#dfe8f6}
+    .nav-toggle{display:none}
+
+    /* Mobile nav */
+    @media (max-width: 960px){
+      .nav-toggle{display:inline-flex; align-items:center; justify-content:center; height:40px; width:40px; border-radius:10px; border:1px solid #2f3a53; background:transparent; color:var(--text)}
+      .nav-menu{display:none; position:absolute; top:68px; left:0; right:0; background:rgba(15,21,36,.98); border-bottom:1px solid rgba(255,255,255,.06); flex-direction:column; padding:10px}
+      .nav-menu.open{display:flex}
+      .nav-menu a{width:100%}
+    }
+
+    /* Hero */
+    .hero{padding:88px 0 40px; position:relative}
+    .hero-inner{display:grid; grid-template-columns: 1.4fr 1fr; gap:40px; align-items:center}
+    .hero h1{font-size: clamp(2rem, 3vw + 1rem, 3.25rem); line-height:1.1; margin:0 0 14px; font-weight:800}
+    .hero p{color:var(--muted); margin:0 0 26px; font-size:1.07rem}
+    .hero-card{background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02)); border:1px solid rgba(255,255,255,.08); border-radius:var(--radius); padding:22px; box-shadow:var(--shadow)}
+    .hero-bullets{display:grid; gap:10px; margin:16px 0}
+    .hero-bullets li{display:flex; align-items:flex-start; gap:10px}
+    .dot{height:9px; width:9px; border-radius:50%; background:var(--brand-2); margin-top:.55rem}
+    .orb-status{display:flex; align-items:center; gap:10px; font-size:.95rem; color:#cfe9ff}
+    .orb{height:12px; width:12px; border-radius:50%; background: radial-gradient(circle at 35% 30%, #b5ffe7, #40d1ff 60%); box-shadow: 0 0 18px rgba(134,247,209,.8)}
+
+    @media (max-width: 960px){
+      .hero{padding:64px 0 20px}
+      .hero-inner{grid-template-columns:1fr}
+    }
+
+    /* Trust strip */
+    .strip{padding:28px 0 10px; color:#c3ccd9}
+    .logos{display:flex; gap:26px; flex-wrap:wrap; align-items:center; opacity:.85}
+    .logo-pill{padding:8px 12px; border:1px solid rgba(255,255,255,.08); border-radius:12px; background:rgba(255,255,255,.02); font-size:.9rem}
+
+    /* Sections */
+    .section{padding:70px 0}
+    .section h2{font-size: clamp(1.6rem, 2.4vw + .6rem, 2.2rem); margin:0 0 12px}
+    .section p.lead{color:var(--muted); margin-top:0}
+
+    /* Features grid */
+    .grid{display:grid; gap:18px}
+    .grid.cols-3{grid-template-columns: repeat(3, 1fr)}
+    @media (max-width: 960px){ .grid.cols-3{grid-template-columns:1fr} }
+    .card{background:var(--card); border:1px solid rgba(255,255,255,.08); border-radius:var(--radius); padding:22px; box-shadow:var(--shadow)}
+    .card h3{margin:0 0 8px}
+    .icon{height:36px; width:36px; display:inline-grid; place-items:center; border-radius:10px; background: linear-gradient(135deg, rgba(106,160,255,.25), rgba(134,247,209,.18)); margin-bottom:10px}
+    .muted{color:var(--muted)}
+
+    /* How it works */
+    .steps{counter-reset: step}
+    .step{display:flex; gap:14px; align-items:flex-start}
+    .badge{counter-increment: step; height:28px; width:28px; border-radius:8px; background:rgba(134,247,209,.16); border:1px solid rgba(134,247,209,.35); display:inline-grid; place-items:center; font-weight:700; color:#bdf3e3; flex:0 0 auto}
+    .badge:before{content: counter(step)}
+
+    /* CTA band */
+    .band{background: linear-gradient(90deg, rgba(134,247,209,.09), rgba(106,160,255,.09)); border:1px solid rgba(255,255,255,.08); border-radius:var(--radius); padding:24px}
+
+    /* Footer */
+    .footer{padding:50px 0 30px; border-top:1px solid rgba(255,255,255,.06); background:rgba(8,12,21,.6)}
+    .footer-grid{display:grid; grid-template-columns:2fr 1fr 1fr; gap:28px}
+    .footer h4{margin:0 0 10px}
+    .small{font-size:.92rem}
+    @media (max-width: 960px){ .footer-grid{grid-template-columns:1fr} }
+
+  </style>
 </head>
 <body>
-    <!-- Header/Navigation -->
-    <header class="header">
-        <div class="container">
-            <nav class="nav">
-                <a href="./index.html" class="nav-logo">
-                    <img src="images/vericustos-logo.png" alt="Vericustos" class="logo-img">
-                </a>
-                
-                <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
-                    ☰
-                </button>
-                
-                <ul class="nav-menu" id="navMenu">
-                    <li><a href="./index.html" class="active">Home</a></li>
-                    <li><a href="./pricing.html">Pricing</a></li>
-                    <li><a href="./documentation.html">Documentation</a></li>
-                    <li><a href="./about.html">About</a></li>
-                    <li><a href="./contact.html">Contact</a></li>
-                </ul>
-            </nav>
+  <!-- Header -->
+  <header class="header" role="banner">
+    <div class="container">
+      <nav class="nav" aria-label="Main navigation">
+        <a href="#top" class="nav-logo" aria-label="Vericustos home">
+          <img class="logo-img" src="images/vericustos-logo.png" alt="Vericustos logo" />
+          <span class="brand-word">Vericustos</span>
+        </a>
+        <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu" aria-label="Toggle navigation">☰</button>
+        <div class="nav-menu" id="navMenu" role="menu">
+          <a role="menuitem" href="#why" class="active">Why</a>
+          <a role="menuitem" href="#features">Features</a>
+          <a role="menuitem" href="#how">How it Works</a>
+          <a role="menuitem" href="#developers">Developers</a>
+          <a role="menuitem" href="#contact">Contact</a>
         </div>
-    </header>
+      </nav>
+    </div>
+  </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <h1>Trust That Survives the Quantum Era</h1>
-            <p>
-                Replace opaque certificate authorities with distributed, human-attested, 
-                quantum-safe credentials. Built for government, critical infrastructure, 
-                and enterprises that need verifiable trust—not promises.
-            </p>
-            <div class="hero-cta">
-                <a href="./contact.html" class="btn btn-primary">Request Pilot Access</a>
-                <a href="./documentation.html" class="btn btn-secondary">View Documentation</a>
-            </div>
+  <!-- Hero -->
+  <section class="hero" id="top">
+    <div class="container hero-inner">
+      <div>
+        <h1>Trust that survives the quantum era</h1>
+        <p>
+          Vericustos replaces opaque certificate authorities with a distributed, human‑attested trust fabric. 
+          It’s private by design, transparent by default, and <strong>post‑quantum from day one</strong>.
+        </p>
+        <div class="hero-cta" style="display:flex; gap:12px; flex-wrap:wrap">
+          <a class="btn btn-primary" href="#contact">Request Pilot Access</a>
+          <a class="btn btn-secondary" href="#developers">View SDK</a>
         </div>
-    </section>
-
-    <!-- Features Section -->
-    <section class="features">
-        <div class="container">
-            <div class="section-title">
-                <h2>Why Vericustos?</h2>
-                <p>
-                    Legacy CAs are centralized, opaque, and vulnerable to quantum attacks. 
-                    We're building the trust infrastructure for a post-quantum world.
-                </p>
-            </div>
-            
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">🔒</div>
-                    <h3>Quantum-Safe from Day Zero</h3>
-                    <p>
-                        100% post-quantum cryptography using NIST-standardized algorithms 
-                        (ML-DSA, ML-KEM, SLH-DSA). No hybrid schemes, no classical fallbacks.
-                    </p>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">👤</div>
-                    <h3>Human-Attested Identity</h3>
-                    <p>
-                        Licensed professionals—CPAs, notaries, attorneys—verify identity. 
-                        They keep 100% of fees; we provide the cryptographic infrastructure.
-                    </p>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">🔍</div>
-                    <h3>Glass-Box Transparency</h3>
-                    <p>
-                        Every certificate, status change, and operation logged in an 
-                        append-only transparency ledger with quantum-safe signatures.
-                    </p>
-                </div>
-            </div>
+        <ul class="hero-bullets" aria-label="Highlights">
+          <li><span class="dot"></span><span>Verify without exposing PII — attestations prove truth, not identity details.</span></li>
+          <li><span class="dot"></span><span>Rapid containment and revocation — incidents are isolated before they spread.</span></li>
+          <li><span class="dot"></span><span>Real‑time Trust Orb — visible authenticity signal across apps, devices, and AI.</span></li>
+        </ul>
+        <div class="orb-status" aria-live="polite">
+          <span class="orb" aria-hidden="true"></span>
+          <span>Orb status: <strong>Trusted</strong> • live revocation checks enabled</span>
         </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h4>Vericustos</h4>
-                    <p>
-                        Post-quantum trust infrastructure for government, 
-                        critical infrastructure, and enterprise.
-                    </p>
-                </div>
-                
-                <div class="footer-section">
-                    <h4>Product</h4>
-                    <ul>
-                        <li><a href="./pricing.html">Pricing</a></li>
-                        <li><a href="./documentation.html">Documentation</a></li>
-                        <li><a href="#">Status Page</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section">
-                    <h4>Company</h4>
-                    <ul>
-                        <li><a href="./about.html">About Us</a></li>
-                        <li><a href="./contact.html">Contact</a></li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="footer-bottom">
-                <p>&copy; 2025 Vericustos Inc. All rights reserved.</p>
-            </div>
+      </div>
+      <aside class="hero-card" aria-label="SLA & Availability">
+        <h3 style="margin:0 0 8px">Service at a glance</h3>
+        <div class="muted small">Hard SLAs, transparent uptime, PQ-native issuance</div>
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-top:14px">
+          <div class="band">
+            <div class="small muted">Revocation SLA</div>
+            <div style="font-weight:800; font-size:1.25rem">12–48 hours</div>
+          </div>
+          <div class="band">
+            <div class="small muted">Transparency</div>
+            <div style="font-weight:800; font-size:1.25rem">On‑chain proofs</div>
+          </div>
+          <div class="band">
+            <div class="small muted">SDK</div>
+            <div style="font-weight:800; font-size:1.25rem">Web • Mobile • CI/CD</div>
+          </div>
+          <div class="band">
+            <div class="small muted">Coverage</div>
+            <div style="font-weight:800; font-size:1.25rem">People • Devices • AI</div>
+          </div>
         </div>
-    </footer>
+      </aside>
+    </div>
+  </section>
 
-    <script src="./js/main.js"></script>
+  <!-- Trust strip -->
+  <div class="strip" id="why">
+    <div class="container">
+      <div class="logos" aria-label="Why now">
+        <div class="logo-pill">Designed for PQ standards</div>
+        <div class="logo-pill">Verify without PII</div>
+        <div class="logo-pill">Attester marketplace</div>
+        <div class="logo-pill">Real‑time revocation</div>
+        <div class="logo-pill">Orb trust indicator</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Features -->
+  <section class="section" id="features">
+    <div class="container">
+      <h2>Why Vericustos?</h2>
+      <p class="lead">Legacy CAs insure against failure. Vericustos prevents it — with human attestation, rapid containment, and PQ‑native cryptography.</p>
+      <div class="grid cols-3" style="margin-top:18px">
+        <div class="card">
+          <div class="icon">🔒</div>
+          <h3>Post‑Quantum from day one</h3>
+          <p class="muted">Built on new PQ standards so what you protect today remains secure for decades — no hybrid fallbacks.</p>
+        </div>
+        <div class="card">
+          <div class="icon">👤</div>
+          <h3>Human‑attested identity</h3>
+          <p class="muted">Licensed professionals verify claims; Vericustos issues the cryptographic proof — privacy intact, trust guaranteed.</p>
+        </div>
+        <div class="card">
+          <div class="icon">🟢</div>
+          <h3>The Trust Orb</h3>
+          <p class="muted">A persistent, user‑visible signal of authenticity with live status (trusted, paused, revoked) across apps and devices.</p>
+        </div>
+        <div class="card">
+          <div class="icon">🧊</div>
+          <h3>Transparent by default</h3>
+          <p class="muted">Issuance and status changes are anchored to a public transparency log — no more black‑box PKI.</p>
+        </div>
+        <div class="card">
+          <div class="icon">⚡</div>
+          <h3>Containment over insurance</h3>
+          <p class="muted">Incidents are isolated fast with hard SLAs — avoiding the costs and delays of litigation‑driven models.</p>
+        </div>
+        <div class="card">
+          <div class="icon">🧩</div>
+          <h3>SDK for builders</h3>
+          <p class="muted">Drop‑in libraries for Web, mobile, and server make issuing and verifying certificates simple and consistent.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How it works -->
+  <section class="section" id="how">
+    <div class="container">
+      <h2>How it works</h2>
+      <p class="lead">Three steps to verifiable trust without exposing private data.</p>
+      <div class="grid" style="grid-template-columns:1.2fr 1fr; gap:26px; margin-top:16px">
+        <div class="card">
+          <div class="step"><span class="badge"></span><div>
+            <h3 style="margin:0 0 6px">1) Human verification</h3>
+            <p class="muted">A licensed professional (notary/CPA/attorney) verifies the subject and signs an attestation.</p>
+          </div></div>
+          <div class="step" style="margin-top:14px"><span class="badge"></span><div>
+            <h3 style="margin:0 0 6px">2) PQ certificate issuance</h3>
+            <p class="muted">Vericustos validates the attestation and issues a PQ‑native certificate with transparency anchoring.</p>
+          </div></div>
+          <div class="step" style="margin-top:14px"><span class="badge"></span><div>
+            <h3 style="margin:0 0 6px">3) Live verification via Orb</h3>
+            <p class="muted">Users prove possession of their private key on demand; the Orb shows real‑time trust status.</p>
+          </div></div>
+        </div>
+        <aside class="card">
+          <h3 style="margin:0 0 8px">Use cases</h3>
+          <ul class="muted" style="margin:10px 0 0 18px; padding:0 0 6px; line-height:1.85">
+            <li>Art & music provenance (ownership, originality)</li>
+            <li>Social media authenticity & anti‑deepfake</li>
+            <li>Friend/ally identification in crisis zones</li>
+            <li>ID‑less wallets & privacy‑preserving identity</li>
+            <li>Device/IoT and AI output verification</li>
+          </ul>
+          <div class="band" style="margin-top:16px">
+            <div class="small muted">Privacy first</div>
+            <div style="font-weight:700">Verify facts, not personal data</div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- Developers CTA -->
+  <section class="section" id="developers">
+    <div class="container">
+      <div class="card" style="display:grid; grid-template-columns:1.3fr 1fr; gap:20px; align-items:center">
+        <div>
+          <h2>Build with the Vericustos SDK</h2>
+          <p class="lead">Drop‑in libraries and a clean API for issuing, verifying, and monitoring certificates — with Orb hooks for real‑time status.</p>
+          <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:8px">
+            <a class="btn btn-primary" href="#">Get the SDK</a>
+            <a class="btn btn-secondary" href="#">Read the docs</a>
+          </div>
+          <div class="muted small" style="margin-top:10px">JavaScript • TypeScript • Python • Go • CLI • CI/CD actions</div>
+        </div>
+        <div class="band">
+          <div class="small muted">Sample verify call</div>
+<pre style="margin:10px 0 0; white-space:pre-wrap; color:#d7e3f7"><code>// Pseudocode
+const cert = await vc.fetchCertificate(id)
+const ok = await vc.verify({ cert, challenge: nonce })
+if (ok && cert.status === 'valid') orb.show('trusted')
+else orb.show('untrusted')</code></pre>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact / CTA -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="band" style="display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap">
+        <div>
+          <h2 style="margin:0 0 6px">Ready to pilot Vericustos?</h2>
+          <p class="muted" style="margin:0">We’re onboarding a limited set of partners in government, critical infrastructure, and enterprise.</p>
+        </div>
+        <div>
+          <a class="btn btn-primary" href="mailto:hello@vericustos.com">Request pilot access</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer" role="contentinfo">
+    <div class="container footer-grid">
+      <div>
+        <h4>Vericustos</h4>
+        <p class="muted small">Distributed trust for people, devices, and AI. Prevention over payout. Transparent by design. PQ from day one.</p>
+      </div>
+      <div>
+        <h4>Product</h4>
+        <div class="small"><a href="#features">Features</a><br/><a href="#developers">SDK</a><br/><a href="#how">How it works</a></div>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <div class="small"><a href="#contact">Contact</a><br/><a href="#">Status</a><br/><a href="#">Privacy</a></div>
+      </div>
+    </div>
+    <div class="container" style="margin-top:12px">
+      <div class="muted small">© 2025 Vericustos Inc. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile navigation toggle
+    const navToggle = document.getElementById('navToggle');
+    const navMenu = document.getElementById('navMenu');
+    navToggle?.addEventListener('click', () => {
+      const open = navMenu.classList.toggle('open');
+      navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+
+    // Smooth scroll for internal links
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', (e) => {
+        const id = a.getAttribute('href');
+        if(id.length > 1){
+          const el = document.querySelector(id);
+          if(el){ e.preventDefault(); el.scrollIntoView({behavior:'smooth', block:'start'}); navMenu.classList.remove('open'); navToggle.setAttribute('aria-expanded','false'); }
+        }
+      });
+    });
+  </script>
 </body>
 </html>
