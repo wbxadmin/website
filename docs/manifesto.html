@@ -92,6 +92,8 @@
           <a role="menuitem" href="#vision">Vision</a>
           <a role="menuitem" href="#verify">Verification</a>
           <a role="menuitem" href="#builders">Builders</a>
+          <!-- Added Producer link -->
+          <a role="menuitem" href="producer.html">Producer</a>
         </div>
       </nav>
     </div>
@@ -265,7 +267,8 @@ else orb.show('untrusted')</code></pre>
           <a href="#principles">Principles</a><br/>
           <a href="#prevention">Prevention</a><br/>
           <a href="#pause">Pause Mode</a><br/>
-          <a href="#pq">PQ Security</a>
+          <a href="#pq">PQ Security</a><br/>
+          <a href="producer.html">Producer</a>
         </div>
       </div>
       <div>
@@ -292,7 +295,7 @@ else orb.show('untrusted')</code></pre>
       navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
     });
 
-    // Smooth scroll
+    // Smooth scroll for hash links only
     document.querySelectorAll('a[href^="#"]').forEach(a => {
       a.addEventListener('click', (e) => {
         const id = a.getAttribute('href');
