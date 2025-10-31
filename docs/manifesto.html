@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Vericustos Manifesto — Distributed Trust for the Post-Quantum Era</title>
-  <meta name="description" content="The Vericustos Manifesto: prevention-first, PQ-native distributed trust platform with human attestation, transparency, and the Trust Orb." />
+  <meta name="description" content="The Vericustos Manifesto: prevention-first, PQ-native distributed trust platform with human attestation, transparency, Pause Mode, and the Trust Orb." />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
@@ -78,7 +78,7 @@
   <header class="header" role="banner">
     <div class="container">
       <nav class="nav" aria-label="Main navigation">
-        <!-- Changed href to index.html so the logo is a link back home -->
+        <!-- Logo links back home -->
         <a href="index.html" class="nav-logo" aria-label="Vericustos home">
           <img class="logo-img" src="images/vericustos-logo.png" alt="Vericustos logo" />
           <span class="brand-word">Vericustos</span>
@@ -87,6 +87,7 @@
         <div class="nav-menu" id="navMenu" role="menu">
           <a role="menuitem" href="#principles">Principles</a>
           <a role="menuitem" href="#prevention">Prevention</a>
+          <a role="menuitem" href="#pause">Pause Mode</a>
           <a role="menuitem" href="#pq">PQ Security</a>
           <a role="menuitem" href="#vision">Vision</a>
           <a role="menuitem" href="#verify">Verification</a>
@@ -154,6 +155,25 @@
     </div>
   </section>
 
+  <!-- Pause Mode (new) -->
+  <section class="section" id="pause">
+    <div class="container">
+      <h2>⏸️ Pause Mode — Self-Service Safety Without Immediate Revocation</h2>
+      <div class="card" style="margin-top:16px">
+        <p><strong>Sometimes you need to hit pause — not destroy keys.</strong> Vericustos introduces <em>Pause Mode</em>, a first-of-its-kind, self-service control that lets certificate owners temporarily suspend trust without revoking the certificate.</p>
+        <ul class="chevrons muted">
+          <li><strong>Planned downtime:</strong> Going offline for maintenance or travel? Pause your cert to reduce attack surface.</li>
+          <li><strong>Investigations:</strong> Suspect compromise? Enter Pause Mode to block live use while you assess, without burning your identity or trust history.</li>
+          <li><strong>Instant status flip:</strong> The Vericustos DTP and Orb reflect <em>Paused</em> across verifiers with near-real-time propagation (designed for sub-10 seconds; conservative upper bound ~1 minute).</li>
+          <li><strong>Reversible by design:</strong> Unpause to restore normal operation, or escalate to <em>Revoke</em> if compromise is confirmed.</li>
+          <li><strong>API & SDK native:</strong> Trigger Pause/Unpause via dashboard, CLI, or SDK; all actions are anchored to the transparency log.</li>
+          <li><strong>No PII exposure:</strong> Only state changes and proofs are published — never private data.</li>
+        </ul>
+        <p class="muted" style="margin-top:10px">Pause Mode turns “containment first” into a practical control: a safer default that prevents spread while preserving options.</p>
+      </div>
+    </div>
+  </section>
+
   <!-- PQ security -->
   <section class="section" id="pq">
     <div class="container">
@@ -213,6 +233,7 @@
             <li>Issue and verify Post-Quantum certificates that meet the latest international standards.</li>
             <li>Interact with the Vericustos Orb — a persistent trust indicator for authenticity and provenance.</li>
             <li>Anchor and verify attestations, transactions, or AI outputs — trusted for decades.</li>
+            <li>Programmatic <strong>Pause/Unpause</strong> and <strong>Revoke</strong> controls via SDK, CLI, and dashboard.</li>
           </ul>
           <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:8px">
             <a class="btn btn-primary" href="#">Get the SDK</a>
@@ -240,11 +261,20 @@ else orb.show('untrusted')</code></pre>
       </div>
       <div>
         <h4>Navigate</h4>
-        <div class="small"><a href="#principles">Principles</a><br/><a href="#prevention">Prevention</a><br/><a href="#pq">PQ Security</a></div>
+        <div class="small">
+          <a href="#principles">Principles</a><br/>
+          <a href="#prevention">Prevention</a><br/>
+          <a href="#pause">Pause Mode</a><br/>
+          <a href="#pq">PQ Security</a>
+        </div>
       </div>
       <div>
         <h4>Get in touch</h4>
-        <div class="small"><a href="#builders">Developers</a><br/><a href="#">Status</a><br/><a href="/cdn-cgi/l/email-protection#cea7a0a8a18eb8abbca7adbbbdbaa1bde0ada1a3"><span class="__cf_email__" data-cfemail="d7beb9b1b897a1b2a5beb4a2a4a3b8a4f9b4b8ba">[email&#160;protected]</span></a></div>
+        <div class="small">
+          <a href="#builders">Developers</a><br/>
+          <a href="#">Status</a><br/>
+          <a href="/cdn-cgi/l/email-protection#cea7a0a8a18eb8abbca7adbbbdbaa1bde0ada1a3"><span class="__cf_email__" data-cfemail="d7beb9b1b897a1b2a5beb4a2a4a3b8a4f9b4b8ba">[email&#160;protected]</span></a>
+        </div>
       </div>
     </div>
     <div class="container" style="margin-top:12px">
@@ -252,7 +282,8 @@ else orb.show('untrusted')</code></pre>
     </div>
   </footer>
 
-  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+  <script>
     // Mobile navigation toggle
     const navToggle = document.getElementById('navToggle');
     const navMenu = document.getElementById('navMenu');
@@ -267,7 +298,12 @@ else orb.show('untrusted')</code></pre>
         const id = a.getAttribute('href');
         if(id.length > 1){
           const el = document.querySelector(id);
-          if(el){ e.preventDefault(); el.scrollIntoView({behavior:'smooth', block:'start'}); navMenu.classList.remove('open'); navToggle.setAttribute('aria-expanded','false'); }
+          if(el){
+            e.preventDefault();
+            el.scrollIntoView({behavior:'smooth', block:'start'});
+            navMenu.classList.remove('open');
+            navToggle.setAttribute('aria-expanded','false');
+          }
         }
       });
     });
