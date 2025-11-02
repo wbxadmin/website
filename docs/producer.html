@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Vericustos — Producer Partnership Call</title>
-  <meta name="description" content="Vericustos seeks a creative studio/producer partner to craft a high-impact demo film. Results-tied compensation. Help launch a new era of trust." />
+  <title>Vericustos — Producer Partnership Invitation</title>
+  <meta name="description" content="Join Vericustos in documenting the distributed conscience of digital civilization. A mission-aligned partnership to bring verifiable truth to life through cinematic storytelling." />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
@@ -34,8 +34,9 @@
     }
     a{color:inherit; text-decoration:none}
     .container{max-width:var(--container); margin:0 auto; padding:0 20px}
-    .btn{display:inline-flex; align-items:center; gap:.6rem; padding:.9rem 1.1rem; border-radius:12px; font-weight:600; letter-spacing:.2px; transition:.2s ease; border:1px solid transparent}
+    .btn{display:inline-flex; align-items:center; gap:.6rem; padding:.9rem 1.1rem; border-radius:12px; font-weight:600; letter-spacing:.2px; transition:.2s ease; border:1px solid transparent; cursor:pointer}
     .btn-primary{background:linear-gradient(135deg, var(--brand), var(--brand-2)); color:#041423; box-shadow: 0 6px 22px rgba(106,160,255,.35)}
+    .btn-primary:hover{transform:translateY(-1px)}
     .btn-secondary{background:transparent; border-color:#2f3a53; color:var(--text)}
     .btn-secondary:hover{border-color:#4b5a7a}
 
@@ -61,12 +62,13 @@
     .section h2{font-size: clamp(1.6rem, 2.4vw + .6rem, 2.2rem); margin:0 0 12px}
     .lead{color:var(--muted); margin-top:0}
     .kicker{font-weight:700; letter-spacing:.3px; color:#cfe9ff; margin-bottom:6px}
+    .motto{font-size:1.1rem; font-style:italic; color:var(--brand-2); margin:0 0 20px; opacity:.95}
     .muted{color:var(--muted)}
     .small{font-size:.92rem}
     .badge{display:inline-block; padding:6px 10px; border:1px solid rgba(255,255,255,.12); border-radius:999px; background:rgba(255,255,255,.04); font-size:.88rem; color:#cfe9ff}
 
     .hero{padding:88px 0 40px}
-    .hero h1{font-size: clamp(2rem, 3vw + 1rem, 3.25rem); line-height:1.1; margin:0 0 12px; font-weight:800}
+    .hero h1{font-size: clamp(2rem, 3vw + 1rem, 3.25rem); line-height:1.1; margin:0 0 14px; font-weight:800}
     .hero p{color:var(--muted); margin:0 0 16px}
     .hero-card{background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02)); border:1px solid rgba(255,255,255,.08); border-radius:var(--radius); padding:22px; box-shadow:var(--shadow)}
 
@@ -91,7 +93,7 @@
 </head>
 <body>
   <!-- Header -->
-  <header class="header" role="banner">
+  <header class="header">
     <div class="container">
       <nav class="nav" aria-label="Main navigation">
         <a href="index.html" class="nav-logo" aria-label="Vericustos home">
@@ -99,13 +101,13 @@
           <span class="brand-word">Vericustos</span>
         </a>
         <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu" aria-label="Toggle navigation">☰</button>
-        <div class="nav-menu" id="navMenu" role="menu">
-          <a role="menuitem" href="index.html#why">Why</a>
-          <a role="menuitem" href="index.html#features">Features</a>
-          <a role="menuitem" href="index.html#how">How it Works</a>
-          <a role="menuitem" href="index.html#developers">Developers</a>
-          <a role="menuitem" href="manifesto.html">Manifesto</a>
-          <a role="menuitem" href="index.html#contact">Contact</a>
+        <div class="nav-menu" id="navMenu">
+          <a href="index.html#mission">Mission</a>
+          <a href="index.html#features">Features</a>
+          <a href="index.html#how">How it Works</a>
+          <a href="index.html#developers">Developers</a>
+          <a href="manifesto.html">Manifesto</a>
+          <a href="index.html#contact">Contact</a>
         </div>
       </nav>
     </div>
@@ -114,238 +116,324 @@
   <!-- Hero -->
   <section class="hero" id="top">
     <div class="container">
-      <span class="kicker">🎬 Producer Partnership Call</span>
-      <h1>Help us tell the story of a new trust fabric</h1>
+      <span class="kicker">🎬 Producer Partnership Invitation</span>
+      <h1>Where Cryptography Meets Conscience</h1>
+      <p class="motto">"Then you will know the truth, and the truth will set you free."</p>
       <p class="lead">
-        Vericustos is a prevention-first, post-quantum trust platform. We’re seeking a creative studio/producer
-        who can craft a cinematic demo that moves decision-makers — and helps launch a safer internet.
+        We're building the distributed conscience of digital civilization—the world's first glass-box Distributed Trust Platform (DTP) that augments legacy PKI with human-attested transparency, Guardian multi-signature governance, and the Trust Orb as the universal signal of truth. We seek a visionary producer who sees this not as a paid project, but as their stake in launching verifiable truth infrastructure—someone compelled enough by the mission to practically donate their craft to documenting how cryptographic accountability empowers journalists against deepfakes, activists with privacy-preserving identity, and humanity reclaiming trust from opaque authority.
       </p>
-      <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:12px">
+      <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:16px">
         <a class="btn btn-primary" href="#brief">Read the brief</a>
-        <a class="btn btn-secondary" href="#pause-scene">Pause Mode scene</a>
-        <a class="btn btn-secondary" href="#compensation">Compensation</a>
-        <a class="btn btn-secondary" href="#apply">How to apply</a>
+        <a class="btn btn-secondary" href="#ethos">Why this matters</a>
+        <a class="btn btn-secondary" href="#partnership">Partnership model</a>
+        <a class="btn btn-secondary" href="#apply">Join us</a>
       </div>
       <aside class="hero-card" style="margin-top:16px">
-        <div class="small muted">We are a new startup with no revenue or infrastructure yet — just a clear mission, strong thesis, and urgency to execute. If our vision resonates, we’d love to partner.</div>
+        <div class="small muted">We're early-stage believers with conviction over capital. This film is both our first verifiable artifact and a litmus test: If the story doesn't compel design partners and investors to join the mission, we pivot. We're seeking storytellers who recognize that compensation feels secondary to being part of redefining civilization's trust infrastructure.</div>
       </aside>
     </div>
   </section>
 
-  <!-- Brief -->
-  <section class="section" id="brief">
+  <!-- Ethos: Why This Film Matters -->
+  <section class="section" id="ethos">
     <div class="container">
-      <h2>The project at a glance</h2>
+      <h2>Why This Film Matters: Truth as a Human Right</h2>
       <div class="grid cols-2" style="margin-top:16px">
         <div class="card">
-          <h3>Objective</h3>
-          <p class="muted">Create a 2–4 minute cinematic demo that makes the case for Vericustos: why the world needs a new, PQ-native trust fabric; how our human-attested certificates and the Trust Orb prevent harm; and why now.</p>
-          <div class="band" style="margin-top:10px">
-            <div class="small muted">Tone</div>
-            <div style="font-weight:700">Real-world, credible, urgent → hopeful and practical</div>
-          </div>
+          <h3>The Crisis of Manipulated Reality</h3>
+          <p class="muted">Deepfakes are projected to cause $10 trillion in damage by 2030. Compromised certificates underpin 65% of breaches. Centralized powers rewrite truth with impunity while quantum computers harvest today's encrypted data for tomorrow's attacks.</p>
+          <p class="muted">Journalists can't prove authenticity in hostile regions. Activists face surveillance without verifiable identity. Enterprises lose billions to supply-chain fraud. Individuals have no recourse against manipulated records.</p>
+          <p><strong>This is the cost of opaque authority.</strong></p>
         </div>
         <div class="card">
-          <h3>Audience</h3>
+          <h3>Vericustos: The Immune System Against Lies</h3>
+          <p class="muted">We're building prevention-first infrastructure where:</p>
           <ul class="chevrons muted">
-            <li>Seed investors and strategic partners</li>
-            <li>Design partners in gov/critical infrastructure/enterprise</li>
-            <li>Senior engineers who’ll build on our SDK</li>
+            <li><strong>Guardian consensus:</strong> No single actor—government, corporation, or us—can alter truth records</li>
+            <li><strong>Glass-box transparency:</strong> Every trust event inspectable via DTP Ledger with Merkle proofs and on-chain anchors</li>
+            <li><strong>Sub-2-minute containment:</strong> Pause Mode suspends compromised trust globally without revocation—reversible investigation, not permanent damage</li>
+            <li><strong>Privacy-by-design:</strong> Verify claims without exposing PII; no backdoors, no silent collection</li>
           </ul>
         </div>
         <div class="card">
-          <h3>Core story beats</h3>
+          <h3>Real-World Impact</h3>
           <ul class="chevrons muted">
-            <li>The problem: deepfakes, data leaks, compromised certs → real losses</li>
-            <li>The shift: prevention over payout; human attestation + rapid containment</li>
-            <li>The product: PQ-native certs, on-chain transparency, live Trust Orb</li>
-            <li><strong>Pause before revoke:</strong> owners can safely suspend trust during maintenance or investigation — then unpause or revoke</li>
-            <li>The outcomes: safer comms, device integrity, AI provenance, social trust</li>
+            <li><strong>Journalists/NGOs:</strong> Verify content and identity in zero-trust environments without compromising sources</li>
+            <li><strong>Enterprises:</strong> Prevent fraud with verifiable supply chains and sub-15-minute incident containment</li>
+            <li><strong>Governments:</strong> Secure critical infrastructure with transparent accountability that survives regime change</li>
+            <li><strong>Individuals:</strong> Prove authenticity without surveillance—birth records, credentials, ownership rights</li>
+            <li><strong>AI systems:</strong> Verifiable provenance from training data to outputs, combating synthetic manipulation at scale</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Your Role: Document the Shift</h3>
+          <p class="muted">This film will humanize mathematical truth—show the Trust Orb glowing green across devices as proof of verifiable neutrality, dramatize Guardian consensus as collective safeguarding, and illustrate how augmenting (not replacing) PKI roots with human-attested bindings creates accountability without centralized control.</p>
+          <div class="band small" style="margin-top:10px">
+            <strong>Tone:</strong> Urgent yet hopeful. Real stakes meet cryptographic conscience. End with empowered resilience: "The truth will set us free."
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- The Brief -->
+  <section class="section" id="brief">
+    <div class="container">
+      <h2>The Project: A Cinematic Manifesto</h2>
+      <div class="grid cols-2" style="margin-top:16px">
+        <div class="card">
+          <h3>Objective</h3>
+          <p class="muted">Create a 2–4 minute film embodying "where cryptography meets conscience"—revealing why the world needs Vericustos' DTP to combat manipulated reality; how human attestation binds to post-quantum verified transparency layers; the Guardian model's provable neutrality; and the Trust Orb's role as truth's universal signal, augmenting PKI to prevent harm before it spreads.</p>
+          <div class="band" style="margin-top:10px">
+            <div class="small muted">Audience</div>
+            <div style="font-weight:700">Seed investors, strategic partners, design partners (government/enterprise/NGOs), and senior engineers who grasp the civilization-scale shift from opaque authority to accountable trust.</div>
+          </div>
+        </div>
+        <div class="card">
+          <h3>Core Story Architecture</h3>
+          <ul class="chevrons muted">
+            <li><strong>Act I — Crisis:</strong> Fractured trust landscape (deepfakes, breaches, quantum threats); centralized power manipulating truth unchecked</li>
+            <li><strong>Act II — The Shift:</strong> Prevention over payout; human-attested claims bound to glass-box DTP Ledger with on-chain anchors—no black-box PKI</li>
+            <li><strong>Act III — The Platform:</strong> Guardian multi-sig ensures neutrality; Trust Orb signals state (Trusted/Paused/Revoked); augments existing infrastructure</li>
+            <li><strong>Act IV — Pause Mode:</strong> Real-time containment—journalist pauses during risk, enterprise investigates anomaly, truth preserved reversibly</li>
+            <li><strong>Act V — Vision:</strong> Verifiable truth levels playing field: safer AI, device integrity, social authenticity. Truth sets us free.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Key Vignettes to Feature</h3>
+          <ul class="chevrons muted">
+            <li><strong>Pause Mode scene (30s):</strong> Professional pauses attestation amid uncertainty; Orb shifts green→amber across devices; subtitle: "Suspended globally in <2min • Reversible • Anchored"</li>
+            <li><strong>Guardian consensus (30s):</strong> Diverse quorum digitally signing policy change; visual: multi-party choreography, transparent audit trail; lower-third: "No single actor can alter truth"</li>
+            <li><strong>Orb montage (20s):</strong> Trust Orb glowing across phone, laptop, tablet; color shifts Trusted/Paused/Revoked with real-time freshness proofs</li>
+            <li><strong>Human anchoring:</strong> Licensed professional (notary/CPA) verifying subject; attestation binds to existing cert; privacy preserved, accountability cryptographic</li>
           </ul>
         </div>
         <div class="card">
           <h3>Deliverables</h3>
           <ul class="chevrons muted">
-            <li>Main film (2–4 min), 1080p</li>
-            <li>30–60s trailer cut</li>
-            <li>3–5 short social clips</li>
-            <li>Open captions + clean captions</li>
-            <li>Audio-described version (optional but preferred)</li>
+            <li>Main film (2–4 min, 1080p minimum / 4K preferred)</li>
+            <li>Founder-voice trailer cut (30–60s, emotional hook for social)</li>
+            <li>Pause Mode micro-demo (15–30s with timestamped checkpoint overlays)</li>
+            <li>Guardian consensus explainer (30–60s, multi-sig choreography visualization)</li>
+            <li>3–5 additional social clips optimized for platform specs</li>
+            <li>Open captions, clean captions, and audio-described version</li>
+            <li>Full asset list with licenses (royalty-free/cleared only)</li>
           </ul>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Featured Scene: Pause before revoke -->
-  <section class="section" id="pause-scene">
+  <!-- Creative Guidance -->
+  <section class="section">
     <div class="container">
-      <h2>Showcase scene: ⏸️ Pause before revoke (vacation flow)</h2>
+      <h2>Creative Direction & Technical Specs</h2>
       <div class="grid cols-2" style="margin-top:16px">
         <div class="card">
-          <h3>What we want the audience to feel</h3>
-          <p class="muted">Calm control. The owner can proactively reduce risk without destroying keys or trust history. It’s practical, human, and reversible.</p>
-          <div class="band small" style="margin-top:10px">
-            <strong>On-screen language to use:</strong> “Status: <span style="color:#ffe27a">Paused</span> (propagates in seconds • reversible)” — never “disabled” or “broken”.
-          </div>
-        </div>
-        <div class="card">
-          <h3>Why it matters</h3>
+          <h3>Visual Language</h3>
           <ul class="chevrons muted">
-            <li>Dramatizes prevention-first posture</li>
-            <li>Shows a control legacy CAs don’t offer</li>
-            <li>Demonstrates live, human action → instant trust-state change</li>
+            <li><strong>Realistic & human-centered:</strong> No sci-fi UI; plausible interfaces we'll provide as mocks</li>
+            <li><strong>Trust Orb:</strong> Glowing sphere with color states (green/amber/red); animate pulsing, state transitions crisply</li>
+            <li><strong>Guardian scenes:</strong> Diverse individuals at terminals; digital signature overlays; transparent audit trails</li>
+            <li><strong>DTP architecture:</strong> Clean diagrams showing Attestation Nodes, Guardian Layer, on-chain anchors—not raw blockchain imagery</li>
+            <li><strong>Human stories:</strong> Journalist in field, activist in shadows, enterprise SOC analyst—real environments, not stock office B-roll</li>
           </ul>
         </div>
         <div class="card">
-          <h3>Shot list (concise)</h3>
+          <h3>Audio & Pacing</h3>
           <ul class="chevrons muted">
-            <li><strong>1) Home office, morning light:</strong> Owner glances at travel ticket on phone; opens laptop.</li>
-            <li><strong>2) Vericustos Portal UI close-up:</strong> “My Certificates” → selects primary cert → big <em>Pause</em> button with short explainer.</li>
-            <li><strong>3) Click & confirm:</strong> Micro-modal: “Pause trust now? (reversible • logs this action)”. Owner confirms.</li>
-            <li><strong>4) Live status swap:</strong> Badge flips from <span style="color:#66e0a3">Trusted</span> to <span style="color:#ffe27a">Paused</span>. Small toast: “Propagating to verifiers…”</li>
-            <li><strong>5) Trust Orb demo device:</strong> Tablet on desk shows Orb glow color shift to amber/paused within moments.</li>
-            <li><strong>6) Resolution:</strong> Owner smiles, closes laptop, powers down desktop, grabs suitcase; door closes. Subtitle: “Pause now. Unpause later. Revoke only if needed.”</li>
+            <li><strong>Music:</strong> Royalty-free, mission-evoking score—hopeful synths over urgent pulses; build tension to resolution</li>
+            <li><strong>SFX:</strong> Subtle UI interactions (soft clicks, chimes on state change); ambient realism (field sounds, distant city)</li>
+            <li><strong>Voiceover:</strong> Optional founder narration or professional VO aligned to manifesto tone; conversational authority</li>
+            <li><strong>Pacing:</strong> Deliberate builds; pause for emotional beats; end on empowerment, not fear</li>
           </ul>
         </div>
         <div class="card">
-          <h3>Visual & sound guidance</h3>
+          <h3>Manifesto Language (Use Consistently)</h3>
           <ul class="chevrons muted">
-            <li><strong>Design:</strong> Realistic UI screens (we’ll supply references). Minimal motion blur; crisp micro-interactions.</li>
-            <li><strong>SFX:</strong> Soft UI click, subtle status-change chime. Ambient home sounds (HVAC, distant street).</li>
-            <li><strong>VO line (optional):</strong> “Sometimes you don’t revoke — you pause. Reduce risk now, resume when you’re ready.”</li>
-            <li><strong>Lower-third:</strong> “Self-service Pause Mode • Reversible • Logged to transparency ledger.”</li>
-          </ul>
-          <div class="band small" style="margin-top:10px">
-            <strong>Licensing:</strong> Use only cleared/royalty-free footage and music. No third-party news clips; headline look-alikes are fine.
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Assets & constraints -->
-  <section class="section" id="assets">
-    <div class="container">
-      <h2>What we provide & creative constraints</h2>
-      <div class="grid cols-2" style="margin-top:16px">
-        <div class="card">
-          <h3>We’ll provide</h3>
-          <ul class="chevrons muted">
-            <li>Brand kit (logo, palette, typography guidance)</li>
-            <li>Homepage + manifesto copy for narrative grounding</li>
-            <li>Screen mockups of the Trust Orb and verification flows</li>
-            <li>Script + narration (AI or supplied VO file)</li>
+            <li>"Glass-box transparency" / "Distributed conscience"</li>
+            <li>"Guardian multi-sig consensus" / "Provably neutral"</li>
+            <li>"Augments, not replaces" / "Binds attestations to DTP"</li>
+            <li>"On-chain anchors" (not "proofs" or "blockchain")</li>
+            <li>"Privacy-by-design" / "No PII, no backdoors"</li>
+            <li>"Prevention over payout" / "Truth's immune system"</li>
+            <li>"Sub-2-minute propagation" / "Verifiable SLAs"</li>
           </ul>
         </div>
         <div class="card">
-          <h3>Constraints & licenses</h3>
+          <h3>What We Provide</h3>
           <ul class="chevrons muted">
-            <li>No unlicensed third-party news footage; headlines may be recreated as motion graphics</li>
-            <li>Use royalty-free/cleared stock where needed; provide asset list + licenses</li>
-            <li>Keep visuals plausible and product-adjacent (no sci-fi UI)</li>
+            <li>Complete brand kit (logo, palette, Inter typography, manifesto excerpts)</li>
+            <li>UI/UX mockups (Trust Orb states, Portal flows, Guardian visualization)</li>
+            <li>Draft script/narration aligned to "cryptography meets conscience" ethos</li>
+            <li>Technical references: DTP architecture diagrams, Pause propagation timeline, Guardian consensus flow</li>
+            <li>Weekly collaboration syncs for creative alignment and mission fidelity</li>
           </ul>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Compensation -->
-  <section class="section" id="compensation">
+  <!-- Partnership Model -->
+  <section class="section" id="partnership">
     <div class="container">
-      <h2>Compensation (results-tied)</h2>
+      <h2>Partnership Model: Shared Conviction, Shared Success</h2>
       <div class="card" style="margin-top:16px">
-        <p><strong>Set compensation tied to results:</strong> For every full US <strong>$1,000,000</strong> raised within nine (9) months of the film’s public release, Vericustos will pay <strong>$50,000</strong> to the Producer.</p>
+        <h3 style="margin-top:0">Our Philosophy</h3>
+        <p>We're seeking a producer who sees this film not as commissioned work but as their stake in launching the world's first provably neutral trust platform—someone compelled enough by the mission that compensation feels secondary to being part of redefining digital civilization's trust infrastructure.</p>
+        <p><strong>If you're driven to practically donate your craft to this mission, we'll reciprocate that generosity.</strong></p>
+      </div>
+      
+      <div class="grid cols-2" style="margin-top:18px">
+        <div class="card">
+          <h3>Equity Partnership Structure</h3>
+          <p class="muted">Mission-aligned equity grant tied to delivery milestones, with transparent vesting:</p>
+          <ul class="chevrons muted">
+            <li><strong>Treatment approval:</strong> Initial equity tranche vests</li>
+            <li><strong>Rough cut delivery:</strong> Second tranche vests</li>
+            <li><strong>Final delivery:</strong> Third tranche vests</li>
+            <li><strong>Impact bonus:</strong> Additional equity consideration tied to verifiable outcomes (pilot signups, design partner commits, watch-through metrics)</li>
+          </ul>
+          <p class="muted small" style="margin-top:10px">Exact percentages co-defined post-pitch based on scope and your vision—typically 0.5–2% range with impact upside. We favor transparent, legally clean structures over contingent cash.</p>
+        </div>
+        
+        <div class="card">
+          <h3>Recognition & Rights</h3>
+          <ul class="chevrons muted">
+            <li><strong>On-screen credit:</strong> "Co-Producer" or "A mission partnership with [Your Studio]"</li>
+            <li><strong>Prominent attribution:</strong> Featured in launch announcements, investor decks, manifesto site</li>
+            <li><strong>Glass-box accountability:</strong> Partnership terms and deliverables anchored on-chain as verifiable commitment</li>
+            <li><strong>Usage rights:</strong> Portfolio use granted; commercial exploitation shared per MOU</li>
+            <li><strong>Cost reimbursement:</strong> Small pool for essential production expenses (cleared assets, equipment rental)</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card" style="margin-top:18px; background:linear-gradient(135deg,rgba(134,247,209,.08),rgba(106,160,255,.08))">
+        <p style="margin:0"><strong>Our commitment:</strong> We intend to reciprocate your mission-driven generosity through additional equity consideration at our discretion as Vericustos grows—whether through advisor roles, future project partnerships, or expanded ownership. Specifics matter less than shared conviction: We're both betting on this vision, and we'll take care of believers who help make verifiable truth a reality.</p>
+      </div>
+
+      <div class="card" style="margin-top:18px">
+        <h3>Legal Framework</h3>
+        <p class="muted">Short Memorandum of Understanding (MOU) establishing:</p>
         <ul class="chevrons muted">
-          <li><strong>Tranches only.</strong> Amounts between milestones do not trigger partial payments (e.g., $1.3M → $50k; $1.99M → $50k; $2.0M+ → $100k).</li>
-          <li><strong>Attribution.</strong> Any investment, grant, or revenue prepayment where the film is used in outreach or meetings qualifies.</li>
-          <li><strong>Timing.</strong> Payments are issued within 15 business days of each milestone being met.</li>
-          <li><strong>Credit.</strong> On-screen acknowledgment: “Produced in partnership with [Your Studio].” We’ll also feature your studio in launch announcements.</li>
+          <li>Scope: deliverables, timeline, approval process</li>
+          <li>IP licensing: usage rights, commercial exploitation terms</li>
+          <li>Attribution: credits, public recognition</li>
+          <li>Equity grant: vesting schedule tied to milestones</li>
+          <li>Cost reimbursement: approved expenses with receipts</li>
         </ul>
-        <div class="band" style="margin-top:10px">
-          The right creative partner will recognize the potential of this story — a chance to help bring a new trust fabric to life and share in the success it inspires.
+        <p class="muted small" style="margin-top:10px">Clean, transparent, mission-preserving—avoiding broker-dealer complexities while protecting both parties.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sample Scenes -->
+  <section class="section" id="scenes">
+    <div class="container">
+      <h2>Sample Vignette: Pause Mode in Action</h2>
+      <div class="grid cols-2" style="margin-top:16px">
+        <div class="card">
+          <h3>Narrative Arc</h3>
+          <p class="muted"><strong>Setup:</strong> Field journalist receives threat notification; environment feels tense but controlled.</p>
+          <p class="muted"><strong>Action:</strong> Opens Vericustos app on phone; selects primary attestation; taps large "Pause" button with tooltip: "Suspend trust now (reversible • logged to DTP)"</p>
+          <p class="muted"><strong>Confirmation:</strong> Modal: "Pause propagates via Guardian Attestation Nodes • Unpause anytime • No PII exposed." Journalist confirms.</p>
+          <p class="muted"><strong>Effect:</strong> Trust Orb on multiple devices (phone, laptop nearby) pulses from green→amber; overlay timestamp: "Paused globally • <2min propagation"</p>
+          <p class="muted"><strong>Resolution:</strong> Journalist exhales, secures devices; subtitle: "Prevention over payout—truth's immune system protects those without power."</p>
+        </div>
+        <div class="card">
+          <h3>Why This Resonates</h3>
+          <ul class="chevrons muted">
+            <li><strong>Demonstrates augmentation:</strong> Binds to existing PKI without re-issuance churn; journalist doesn't lose identity history</li>
+            <li><strong>Shows Guardian propagation:</strong> Sub-2-minute global update via distributed Attestation Nodes—not centralized control</li>
+            <li><strong>Humanizes mission:</strong> Real person in hostile environment using privacy-preserving tool; empowerment without surveillance</li>
+            <li><strong>Illustrates reversibility:</strong> Can resume when safe or escalate to revoke if compromise confirmed—options preserved</li>
+          </ul>
+          <div class="band small" style="margin-top:10px">
+            <strong>Length:</strong> 20–30s standalone clip for social amplification and demo loops
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Who we are -->
-  <section class="section" id="about">
-    <div class="container">
-      <h2>Who and where we are</h2>
-      <div class="card" style="margin-top:16px">
-        <p class="muted">
-          We’re an early-stage startup with no revenue or infrastructure yet. We have a clear mission, capable AI tools, a strong technical thesis, and a simple belief that:
-          <em>the truth will set us free and there can be real trust in the digital world.</em> This film will be used to attract ivestors and early design partners who share that conviction. The demo will serve as a viability test and if we cannot compel people to buy into the vision, then, there's absolutely no reason to expend the effort to build a product no one wants. We're taking a demo-sell-build approach.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- How to apply -->
+  <!-- Apply -->
   <section class="section" id="apply">
     <div class="container">
-      <h2>How to apply</h2>
+      <h2>Join Us: Your Vision Pitch</h2>
       <div class="grid cols-2" style="margin-top:16px">
         <div class="card">
-          <h3>Your pitch (short & sharp)</h3>
+          <h3>What to Send</h3>
           <ul class="chevrons muted">
-            <li>1–2 paragraph vision for the film’s creative direction</li>
-            <li>Link to 2–3 relevant past works (montage/news-style + product storytelling preferred)</li>
-            <li>Rough timeline and production approach</li>
-            <li>Any special capabilities (motion design, sound design, VO, field crew)</li>
+            <li><strong>Your vision (1–2 paragraphs):</strong> How will you humanize the DTP's conscience? How will you visualize Guardian consensus or the Orb as truth's beacon?</li>
+            <li><strong>Past work (2–3 links):</strong> Mission-driven storytelling, tech/product narratives, or documentary work that shows you can balance urgency with hope</li>
+            <li><strong>Rough timeline & approach:</strong> Production phases, team capabilities, unique strengths (motion design, field crew, ethical animation)</li>
+            <li><strong>Why this mission:</strong> What about verifiable truth, prevention-first resilience, or glass-box transparency compels you personally?</li>
           </ul>
         </div>
         <div class="card">
-          <h3>Send to</h3>
-          <p class="muted">Email: <a href="/cdn-cgi/l/email-protection#cba2a5ada48bbdaeb9a2a8beb8bfa4b8e5a8a4a6" class="small"><span class="__cf_email__" data-cfemail="8ce5e2eae3ccfae9fee5eff9fff8e3ffa2efe3e1">[email&nbsp;protected]</span></a></p>
-          <p class="muted small">Subject: <strong>Producer Partnership — Vericustos</strong></p>
-          <div class="band small">We’ll review quickly and set up a call with promising partners.</div>
+          <h3>Contact</h3>
+          <p class="muted">Email: <a href="mailto:info@vericustos.com" style="color:var(--brand-2)">info@vericustos.com</a></p>
+          <p class="muted small">Subject: <strong>Producer Partnership — Vericustos Mission</strong></p>
+          <div class="band small" style="margin-top:10px">
+            We respond within 48 hours to vision-aligned pitches and schedule discovery calls to explore creative direction and partnership structure.
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- CTA -->
-  <section class="section" id="cta">
+  <!-- Final CTA -->
+  <section class="section">
     <div class="container">
       <div class="band" style="display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap">
         <div>
-          <h2 style="margin:0 0 6px">Ready to help launch a new trust era?</h2>
-          <p class="muted" style="margin:0">Send your concept treatment and links — let’s build something that moves the world.</p>
+          <h2 style="margin:0 0 8px">Ready to Document the Distributed Conscience?</h2>
+          <p class="muted" style="margin:0">If this story of cryptographic accountability and verifiable truth moves you—if you see this as your stake in redefining civilization's trust infrastructure—pitch us. Together, we'll launch the era where truth proves itself.</p>
         </div>
-        <div>
-          <a class="btn btn-primary" href="#apply">Submit your pitch</a>
-          <a class="btn btn-secondary" href="manifesto.html">Read our Manifesto</a>
+        <div style="display:flex; gap:10px; flex-wrap:wrap">
+          <a class="btn btn-primary" href="mailto:info@vericustos.com">Submit Your Vision</a>
+          <a class="btn btn-secondary" href="manifesto.html">Read the Manifesto</a>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="footer" role="contentinfo">
+  <footer class="footer">
     <div class="container footer-grid">
       <div>
         <h4>Vericustos</h4>
-        <p class="muted small">Distributed trust for people, devices, and AI. Prevention over payout. Transparent by design. PQ from day one.</p>
+        <p class="muted small">
+          Distributed trust for people, devices, and AI. Prevention over payout. Transparent by design. Post-quantum from day one. Augments, not replaces, your CAs.<br/>
+          <em>"Then you will know the truth, and the truth will set you free."</em>
+        </p>
       </div>
       <div>
         <h4>Product</h4>
-        <div class="small"><a href="index.html#features">Features</a><br/><a href="index.html#developers">SDK</a><br/><a href="index.html#how">How it works</a></div>
+        <div class="small">
+          <a href="index.html#features">Features</a><br/>
+          <a href="index.html#developers">SDK</a><br/>
+          <a href="index.html#how">How it works</a><br/>
+          <a href="manifesto.html">Manifesto</a>
+        </div>
       </div>
       <div>
         <h4>Company</h4>
-        <div class="small"><a href="manifesto.html">Manifesto</a><br/><a href="index.html#contact">Contact</a><br/><a href="#">Status</a></div>
+        <div class="small">
+          <a href="index.html#contact">Contact</a><br/>
+          <a href="#">Status</a><br/>
+          <a href="#">Privacy</a>
+        </div>
       </div>
     </div>
     <div class="container" style="margin-top:12px">
-      <div class="muted small">© 2025 Vericustos Inc. All rights reserved.</div>
+      <div class="muted small">© 2025 Vericustos Inc. All rights reserved. • Where cryptography meets conscience.</div>
     </div>
   </footer>
 
-  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
   <script>
-    // Mobile navigation toggle
+    // Mobile navigation
     const navToggle = document.getElementById('navToggle');
     const navMenu = document.getElementById('navMenu');
     navToggle?.addEventListener('click', () => {
@@ -353,13 +441,18 @@
       navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
     });
 
-    // Smooth scroll for on-page anchors only
+    // Smooth scroll
     document.querySelectorAll('a[href^="#"]').forEach(a => {
       a.addEventListener('click', (e) => {
         const id = a.getAttribute('href');
         if(id.length > 1){
           const el = document.querySelector(id);
-          if(el){ e.preventDefault(); el.scrollIntoView({behavior:'smooth', block:'start'}); navMenu.classList.remove('open'); navToggle.setAttribute('aria-expanded','false'); }
+          if(el){
+            e.preventDefault();
+            el.scrollIntoView({behavior:'smooth', block:'start'});
+            navMenu.classList.remove('open');
+            navToggle.setAttribute('aria-expanded','false');
+          }
         }
       });
     });

@@ -4,19 +4,19 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Vericustos — Distributed Trust for the Post-Quantum Era</title>
-  <meta name="description" content="Vericustos delivers PQ-native certificates, human attestation, a real-time Pause mode, and a developer SDK with the Trust Orb.">
+  <meta name="description" content="Vericustos is a distributed, post-quantum transparency and human-attestation layer that augments today's PKI. Glass-box by design, with the Trust Orb, Pause mode, and Guardian multi-sig governance.">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
   <style>
     :root{
-      --bg: #0b0f1a; /* deep navy */
-      --card: #0f1524; /* slightly lighter */
-      --muted: #9aa4b2; /* slate */
-      --text: #e7edf5; /* near white */
-      --brand: #6aa0ff; /* cornflower */
-      --brand-2: #86f7d1; /* aqua mint */
-      --accent: #ffe27a; /* soft gold */
+      --bg: #0b0f1a;
+      --card: #0f1524;
+      --muted: #9aa4b2;
+      --text: #e7edf5;
+      --brand: #6aa0ff;
+      --brand-2: #86f7d1;
+      --accent: #ffe27a;
       --danger: #ff7a7a;
       --ok: #66e0a3;
       --radius: 14px;
@@ -63,6 +63,7 @@
     .hero{padding:88px 0 40px; position:relative}
     .hero-inner{display:grid; grid-template-columns: 1.4fr 1fr; gap:40px; align-items:center}
     .hero h1{font-size: clamp(2rem, 3vw + 1rem, 3.25rem); line-height:1.1; margin:0 0 14px; font-weight:800}
+    .hero .motto{font-size:1.1rem; font-style:italic; color:var(--brand-2); margin:0 0 20px; opacity:.9}
     .hero p{color:var(--muted); margin:0 0 26px; font-size:1.07rem}
     .hero-card{background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02)); border:1px solid rgba(255,255,255,.08); border-radius:var(--radius); padding:22px; box-shadow:var(--shadow)}
     .hero-bullets{display:grid; gap:10px; margin:16px 0}
@@ -114,22 +115,22 @@
 </head>
 <body>
   <!-- Header -->
-  <header class="header" role="banner">
+  <header class="header">
     <div class="container">
-      <nav class="nav" aria-label="Main navigation">
+      <nav class="nav">
         <a href="#top" class="nav-logo" aria-label="Vericustos home">
           <img class="logo-img" src="images/vericustos-logo.png" alt="Vericustos logo" />
           <span class="brand-word">Vericustos</span>
         </a>
         <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu" aria-label="Toggle navigation">☰</button>
-        <div class="nav-menu" id="navMenu" role="menu">
-          <a role="menuitem" href="#why" class="active">Why</a>
-          <a role="menuitem" href="#features">Features</a>
-          <a role="menuitem" href="#how">How it Works</a>
-          <a role="menuitem" href="#developers">Developers</a>
-          <a role="menuitem" href="manifesto.html">Manifesto</a>
-          <a role="menuitem" href="producer.html">Producer</a>
-          <a role="menuitem" href="#contact">Contact</a>
+        <div class="nav-menu" id="navMenu">
+          <a href="#mission" class="active">Mission</a>
+          <a href="#features">Features</a>
+          <a href="#how">How it Works</a>
+          <a href="#developers">Developers</a>
+          <a href="manifesto.html">Manifesto</a>
+          <a href="producer.html">Producer</a>
+          <a href="#contact">Contact</a>
         </div>
       </nav>
     </div>
@@ -139,39 +140,42 @@
   <section class="hero" id="top">
     <div class="container hero-inner">
       <div>
-        <h1>Trust that survives the quantum era</h1>
+        <h1>Where cryptography meets conscience</h1>
+        <p class="motto">"Then you will know the truth, and the truth will set you free."</p>
         <p>
-          Vericustos augments today’s legacy certificate ecosystem with a better, prevention-first layer — a distributed, human-attested trust fabric.
-          It’s private by design, transparent by default, and <strong>post-quantum from day one</strong>.</strong>
+          Vericustos augments today's certificate ecosystem with a prevention-first, distributed, human-attested trust layer.
+          It's private by design, transparent by default, and <strong>post-quantum from day one</strong>.
+          We don't replace your CAs — we add a verifiable truth layer on top.
         </p>
         <div class="hero-cta" style="display:flex; gap:12px; flex-wrap:wrap">
           <a class="btn btn-primary" href="#contact">Request Pilot Access</a>
           <a class="btn btn-secondary" href="#developers">View SDK</a>
         </div>
-        <ul class="hero-bullets" aria-label="Highlights">
-          <li><span class="dot"></span><span>Verify without exposing PII — attestations prove truth, not identity details.</span></li>
-          <li><span class="dot"></span><span>Rapid containment and revocation — incidents are isolated before they spread.</span></li>
-          <li><span class="dot"></span><span><strong>One-tap Pause mode</strong> — instantly suspend trust during suspicion, then safely resume without re-issuance.</span></li>
+        <ul class="hero-bullets" aria-label="Core principles">
+          <li><span class="dot"></span><span><strong>Glass-box architecture:</strong> Every function and transaction is inspectable, never hidden.</span></li>
+          <li><span class="dot"></span><span><strong>Human accountability:</strong> People verify truth alongside cryptography — attestations prove claims without exposing private data.</span></li>
+          <li><span class="dot"></span><span><strong>Guardian governance:</strong> Multi-signature consensus ensures no single actor — not governments, corporations, or even us — can manipulate truth.</span></li>
+          <li><span class="dot"></span><span><strong>Real-time Pause:</strong> Instantly suspend trust during investigation, then safely resume without re-issuance.</span></li>
         </ul>
         <div class="orb-status" aria-live="polite">
           <span class="orb" aria-hidden="true"></span>
-          <span>Orb status: <strong>Trusted</strong> • live revocation checks enabled</span>
+          <span>Orb status: <strong>Trusted</strong> • live verification enabled</span>
         </div>
         <div style="margin-top:10px; display:flex; gap:10px; flex-wrap:wrap">
           <button class="btn btn-secondary" id="pauseDemoBtn">Demo: Toggle Pause</button>
         </div>
       </div>
-      <aside class="hero-card" aria-label="SLA & Availability">
-        <h3 style="margin:0 0 8px">Service at a glance</h3>
-        <div class="muted small">Hard SLAs, transparent uptime, PQ-native issuance</div>
+      <aside class="hero-card" aria-label="Platform overview">
+        <h3 style="margin:0 0 8px">Platform at a glance</h3>
+        <div class="muted small">Target SLAs, transparent operation, PQ-native foundation (pre-product)</div>
         <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-top:14px">
           <div class="band">
-            <div class="small muted">Revocation SLA</div>
-            <div style="font-weight:800; font-size:1.25rem">12–48 hours</div>
+            <div class="small muted">Pause propagation (target)</div>
+            <div style="font-weight:800; font-size:1.25rem">≤ 2 minutes</div>
           </div>
           <div class="band">
             <div class="small muted">Transparency</div>
-            <div style="font-weight:800; font-size:1.25rem">On-chain proofs</div>
+            <div style="font-weight:800; font-size:1.25rem">Merkle + on-chain anchors</div>
           </div>
           <div class="band">
             <div class="small muted">SDK</div>
@@ -182,8 +186,8 @@
             <div style="font-weight:800; font-size:1.25rem">People • Devices • AI</div>
           </div>
           <div class="band">
-            <div class="small muted">Pause propagation</div>
-            <div style="font-weight:800; font-size:1.25rem">≈ 60 seconds</div>
+            <div class="small muted">Governance</div>
+            <div style="font-weight:800; font-size:1.25rem">Multi-sig Guardian consensus</div>
           </div>
         </div>
       </aside>
@@ -191,59 +195,94 @@
   </section>
 
   <!-- Trust strip -->
-  <div class="strip" id="why">
+  <div class="strip" id="mission">
     <div class="container">
-      <div class="logos" aria-label="Why now">
-        <div class="logo-pill">Designed for PQ standards</div>
-        <div class="logo-pill">Verify without PII</div>
-        <div class="logo-pill">Attester marketplace</div>
-        <div class="logo-pill">Real-time revocation</div>
-        <div class="logo-pill">Orb trust indicator</div>
-        <div class="logo-pill">One-tap Pause mode</div>
+      <div class="logos" aria-label="Core capabilities">
+        <div class="logo-pill">Glass-box architecture</div>
+        <div class="logo-pill">Human-attested truth</div>
+        <div class="logo-pill">Privacy by design</div>
+        <div class="logo-pill">Guardian multi-sig</div>
+        <div class="logo-pill">On-chain anchors</div>
+        <div class="logo-pill">One-tap Pause</div>
       </div>
     </div>
   </div>
 
+  <!-- Mission Ethos -->
+  <section class="section">
+    <div class="container">
+      <h2>The Mission: Trust as a Human Right</h2>
+      <p class="lead">Vericustos exists to level the trust playing field for everyone. We're building the distributed conscience of digital civilization — a platform where truth proves itself through math, human accountability, and verifiable transparency.</p>
+      <div class="grid cols-3" style="margin-top:18px">
+        <div class="card">
+          <div class="icon">⚖️</div>
+          <h3>Provably neutral</h3>
+          <p class="muted">Guardian consensus ensures no government, corporation, or individual can rewrite truth. All governance actions are logged and cryptographically verified.</p>
+        </div>
+        <div class="card">
+          <div class="icon">🔍</div>
+          <h3>Verifiable by design</h3>
+          <p class="muted">Every trust event — from attestation to revocation — is recorded in an append-only transparency log with Merkle proofs and on-chain integrity anchors.</p>
+        </div>
+        <div class="card">
+          <div class="icon">🛡️</div>
+          <h3>Prevention over payout</h3>
+          <p class="muted">Legacy systems insure against breaches. We prevent them — containing incidents in minutes, not days, with verifiable SLAs and real-time Pause capabilities.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Features -->
   <section class="section" id="features">
     <div class="container">
-      <h2>Why Vericustos?</h2>
-      <p class="lead">Legacy CAs insure against failure. Vericustos prevents it — with human attestation, rapid containment, <strong>one-tap Pause</strong>, and PQ-native cryptography.</p>
+      <h2>The Vericustos Distributed Trust Platform</h2>
+      <p class="lead">A verifiable transparency layer that binds human attestation with post-quantum cryptography, augmenting today's PKI without replacing established roots.</p>
       <div class="grid cols-3" style="margin-top:18px">
         <div class="card">
           <div class="icon">🔒</div>
-          <h3>Post-Quantum from day one</h3>
-          <p class="muted">Built on new PQ standards so what you protect today remains secure for decades — no hybrid fallbacks.</p>
+          <h3>Post-quantum foundation</h3>
+          <p class="muted">NIST-aligned PQC algorithms from day one — pure ML-DSA and SLH-DSA signatures with no hybrid compromises or quantum vulnerabilities.</p>
         </div>
         <div class="card">
           <div class="icon">👤</div>
-          <h3>Human-attested identity</h3>
-          <p class="muted">Licensed professionals verify claims; Vericustos issues the cryptographic proof — privacy intact, trust guaranteed.</p>
+          <h3>Human-attested claims</h3>
+          <p class="muted">Licensed professionals anchor high-impact attestations; cryptography verifies, but people remain accountable — bridging digital validity with real-world responsibility.</p>
         </div>
         <div class="card">
           <div class="icon">🟢</div>
           <h3>The Trust Orb</h3>
-          <p class="muted">A persistent, user-visible signal of authenticity with live status (trusted, <strong>paused</strong>, revoked) across apps and devices.</p>
+          <p class="muted">A universal signal of truth — a persistent, user-visible indicator showing real-time trust state (Trusted, Paused, Revoked) across all platforms.</p>
         </div>
         <div class="card">
           <div class="icon">🧊</div>
           <h3>Transparent by default</h3>
-          <p class="muted">Issuance and status changes are anchored to a public transparency log — no more black-box PKI.</p>
+          <p class="muted">Attestations and status changes are logged with Merkle proofs and on-chain anchors — no black-box trust, only verifiable transparency.</p>
         </div>
         <div class="card">
           <div class="icon">⏸️</div>
-          <h3>Pause without breaking keys</h3>
-          <p class="muted">Temporarily suspend a cert/org/device in seconds, investigate, then resume — no re-issue churn, no lost trust chain.</p>
+          <h3>Pause without re-issuance</h3>
+          <p class="muted">Suspend trust in seconds during investigation, then safely resume — preserving existing chains and avoiding re-issuance overhead.</p>
+        </div>
+        <div class="card">
+          <div class="icon">🛡️</div>
+          <h3>Guardian governance</h3>
+          <p class="muted">No single actor can alter records. Consensus-based, multi-signature controls make all policy changes inspectable and immutable.</p>
         </div>
         <div class="card">
           <div class="icon">⚡</div>
-          <h3>Containment over insurance</h3>
-          <p class="muted">Incidents are isolated fast with hard SLAs — avoiding the costs and delays of litigation-driven models.</p>
+          <h3>Real-time containment</h3>
+          <p class="muted">Incidents are isolated with verifiable SLAs (target: sub-15-minute global propagation) — preventing damage rather than insuring against it.</p>
+        </div>
+        <div class="card">
+          <div class="icon">🔐</div>
+          <h3>Privacy by design</h3>
+          <p class="muted">No silent data collection, no backdoors, no observer access. Verify claims without exposing personal information.</p>
         </div>
         <div class="card">
           <div class="icon">🧩</div>
           <h3>SDK for builders</h3>
-          <p class="muted">Drop-in libraries for Web, mobile, and server make issuing and verifying certificates simple and consistent.</p>
+          <p class="muted">Drop-in libraries for Web, mobile, and server environments — making verification and attestation simple, consistent, and auditable.</p>
         </div>
       </div>
     </div>
@@ -253,34 +292,36 @@
   <section class="section" id="how">
     <div class="container">
       <h2>How it works</h2>
-      <p class="lead">Three steps to verifiable trust without exposing private data.</p>
+      <p class="lead">Three steps to verifiable trust that augments existing infrastructure without requiring new certificate roots.</p>
       <div class="grid" style="grid-template-columns:1.2fr 1fr; gap:26px; margin-top:16px">
         <div class="card">
           <div class="step"><span class="badge"></span><div>
             <h3 style="margin:0 0 6px">1) Human verification</h3>
-            <p class="muted">A licensed professional (notary/CPA/attorney) verifies the subject and signs an attestation.</p>
+            <p class="muted">A licensed professional (notary, CPA, attorney) verifies the subject and signs an attestation — anchoring digital trust to real-world accountability.</p>
           </div></div>
           <div class="step" style="margin-top:14px"><span class="badge"></span><div>
-            <h3 style="margin:0 0 6px">2) PQ certificate issuance</h3>
-            <p class="muted">Vericustos validates the attestation and issues a PQ-native certificate with transparency anchoring.</p>
+            <h3 style="margin:0 0 6px">2) Transparency binding</h3>
+            <p class="muted">Bind human attestations and existing certificates to a PQ-verified transparency log with on-chain anchors — augmenting, not replacing, current PKI roots.</p>
           </div></div>
           <div class="step" style="margin-top:14px"><span class="badge"></span><div>
             <h3 style="margin:0 0 6px">3) Live verification via Orb</h3>
-            <p class="muted">Users prove possession of their private key on demand; the Orb shows real-time trust status (<strong>Trusted</strong>, <strong>Paused</strong>, or Revoked).</p>
+            <p class="muted">Users prove possession on demand; the Orb shows real-time trust status (Trusted, Paused, or Revoked) with cryptographic proof of freshness.</p>
           </div></div>
         </div>
         <aside class="card">
           <h3 style="margin:0 0 8px">Use cases</h3>
           <ul class="muted" style="margin:10px 0 0 18px; padding:0 0 6px; line-height:1.85">
-            <li>Art & music provenance (ownership, originality)</li>
-            <li>Social media authenticity & anti-deepfake</li>
-            <li>Friend/ally identification in crisis zones</li>
-            <li>ID-less wallets & privacy-preserving identity</li>
-            <li>Device/IoT and AI output verification</li>
+            <li>Journalists combating deepfakes and protecting sources</li>
+            <li>Activists verifying identity in hostile environments</li>
+            <li>Governments securing critical infrastructure</li>
+            <li>Enterprises preventing supply chain fraud</li>
+            <li>Creators proving authenticity and ownership</li>
+            <li>NGOs operating in zero-trust regions</li>
+            <li>AI systems requiring verifiable output provenance</li>
           </ul>
           <div class="band" style="margin-top:16px">
-            <div class="small muted">Privacy first</div>
-            <div style="font-weight:700">Verify facts, not personal data</div>
+            <div class="small muted">Philosophy</div>
+            <div style="font-weight:700">Verify claims, not identities — privacy and truth coexist</div>
           </div>
         </aside>
       </div>
@@ -293,7 +334,7 @@
       <div class="card" style="display:grid; grid-template-columns:1.3fr 1fr; gap:20px; align-items:center">
         <div>
           <h2>Build with the Vericustos SDK</h2>
-          <p class="lead">Drop-in libraries and a clean API for issuing, verifying, and monitoring certificates — with Orb hooks for real-time status, including Pause.</p>
+          <p class="lead">Drop-in libraries and a clean API for verifying attestations, reading transparency checkpoints, and driving the Orb — with Pause/Resume hooks. We augment your existing PKI; no new roots required.</p>
           <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:8px">
             <a class="btn btn-primary" href="#">Get the SDK</a>
             <a class="btn btn-secondary" href="#">Read the docs</a>
@@ -319,21 +360,24 @@ else orb.show('untrusted')</code></pre>
       <div class="band" style="display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap">
         <div>
           <h2 style="margin:0 0 6px">Ready to pilot Vericustos?</h2>
-          <p class="muted" style="margin:0">We’re onboarding a limited set of partners in government, critical infrastructure, and enterprise.</p>
+          <p class="muted" style="margin:0">We're onboarding design partners in government, critical infrastructure, journalism, and enterprise who demand verifiable truth.</p>
         </div>
         <div>
-          <a class="btn btn-primary" href="/cdn-cgi/l/email-protection#573e393138172132253e3422242338247934383a">Request pilot access</a>
+          <a class="btn btn-primary" href="mailto:info@vericustos.com">Request pilot access</a>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="footer" role="contentinfo">
+  <footer class="footer">
     <div class="container footer-grid">
       <div>
         <h4>Vericustos</h4>
-        <p class="muted small">Distributed trust for people, devices, and AI. Prevention over payout. Transparent by design. PQ from day one. <strong>Pause when in doubt.</strong></p>
+        <p class="muted small">
+          Distributed trust for people, devices, and AI. Prevention over payout. Transparent by design. Post-quantum from day one. Augments, not replaces, your CAs.<br/>
+          <em>"Then you will know the truth, and the truth will set you free."</em>
+        </p>
       </div>
       <div>
         <h4>Product</h4>
@@ -351,11 +395,10 @@ else orb.show('untrusted')</code></pre>
       </div>
     </div>
     <div class="container" style="margin-top:12px">
-      <div class="muted small">© 2025 Vericustos Inc. All rights reserved.</div>
+      <div class="muted small">© 2025 Vericustos Inc. All rights reserved. • Where cryptography meets conscience.</div>
     </div>
   </footer>
 
-  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
   <script>
     // Mobile navigation toggle
     const navToggle = document.getElementById('navToggle');
@@ -394,7 +437,7 @@ else orb.show('untrusted')</code></pre>
         orbDot.style.boxShadow = "0 0 18px rgba(255,226,122,.9)";
         orbDot.style.background = "radial-gradient(circle at 35% 30%, #ffe27a, #ffb74d 60%)";
       } else {
-        orbText.innerHTML = "Orb status: <strong>Trusted</strong> • live revocation checks enabled";
+        orbText.innerHTML = "Orb status: <strong>Trusted</strong> • live verification enabled";
         orbDot.style.boxShadow = "0 0 18px rgba(134,247,209,.8)";
         orbDot.style.background = "radial-gradient(circle at 35% 30%, #b5ffe7, #40d1ff 60%)";
       }

@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Vericustos Manifesto — Distributed Trust for the Post-Quantum Era</title>
-  <meta name="description" content="The Vericustos Manifesto: prevention-first, PQ-native distributed trust platform with human attestation, transparency, Pause Mode, and the Trust Orb." />
+  <title>Vericustos Manifesto — Where Cryptography Meets Conscience</title>
+  <meta name="description" content="The Vericustos Manifesto: A prevention-first, post-quantum Distributed Trust Platform that augments today's PKI with human attestation, glass-box transparency, Guardian governance, real-time Pause Mode, and the Trust Orb as the universal signal of truth.">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
@@ -21,6 +21,7 @@
     /* buttons */
     .btn{display:inline-flex;align-items:center;gap:.6rem;padding:.9rem 1.1rem;border-radius:12px;font-weight:600;letter-spacing:.2px;transition:.2s ease;border:1px solid transparent}
     .btn-primary{background:linear-gradient(135deg,var(--brand),var(--brand-2));color:#041423;box-shadow:0 6px 22px rgba(106,160,255,.35)}
+    .btn-primary:hover{transform:translateY(-1px)}
     .btn-secondary{background:transparent;border-color:#2f3a53;color:var(--text)}
     .btn-secondary:hover{border-color:#4b5a7a}
 
@@ -43,9 +44,10 @@
 
     /* hero */
     .hero{padding:88px 0 40px}
-    .hero h1{font-size:clamp(2rem,3vw + 1rem,3.25rem);line-height:1.1;margin:0 0 12px;font-weight:800}
+    .hero h1{font-size:clamp(2rem,3vw + 1rem,3.25rem);line-height:1.1;margin:0 0 14px;font-weight:800}
+    .hero .motto{font-size:1.1rem;font-style:italic;color:var(--brand-2);margin:0 0 20px;opacity:.95}
     .hero p{color:var(--muted);margin:0 0 16px}
-    .hero .meta{color:#c3ccd9}
+    .hero .meta{color:#c3ccd9;font-size:.95rem}
 
     /* content sections */
     .section{padding:64px 0}
@@ -75,25 +77,27 @@
 </head>
 <body>
   <!-- header -->
-  <header class="header" role="banner">
+  <header class="header">
     <div class="container">
       <nav class="nav" aria-label="Main navigation">
-        <!-- Logo links back home -->
         <a href="index.html" class="nav-logo" aria-label="Vericustos home">
           <img class="logo-img" src="images/vericustos-logo.png" alt="Vericustos logo" />
           <span class="brand-word">Vericustos</span>
         </a>
         <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu" aria-label="Toggle navigation">☰</button>
-        <div class="nav-menu" id="navMenu" role="menu">
-          <a role="menuitem" href="#principles">Principles</a>
-          <a role="menuitem" href="#prevention">Prevention</a>
-          <a role="menuitem" href="#pause">Pause Mode</a>
-          <a role="menuitem" href="#pq">PQ Security</a>
-          <a role="menuitem" href="#vision">Vision</a>
-          <a role="menuitem" href="#verify">Verification</a>
-          <a role="menuitem" href="#builders">Builders</a>
-          <!-- Added Producer link -->
-          <a role="menuitem" href="producer.html">Producer</a>
+        <div class="nav-menu" id="navMenu">
+          <a href="#principles">Principles</a>
+          <a href="#governance">Governance</a>
+          <a href="#orb">The Orb</a>
+          <a href="#prevention">Prevention</a>
+          <a href="#pause">Pause Mode</a>
+          <a href="#pq">PQ Security</a>
+          <a href="#architecture">Architecture</a>
+          <a href="#philosophy">Philosophy</a>
+          <a href="#vision">Vision</a>
+          <a href="#verify">Verification</a>
+          <a href="#builders">Builders</a>
+          <a href="producer.html">Producer</a>
         </div>
       </nav>
     </div>
@@ -103,12 +107,14 @@
   <section class="hero" id="top">
     <div class="container">
       <p class="kicker">🌍 The Vericustos Manifesto</p>
-      <h1>Distributed Trust for the Post-Quantum Era</h1>
+      <h1>Where Cryptography Meets Conscience</h1>
+      <p class="motto">"Then you will know the truth, and the truth will set you free."</p>
       <p class="meta">Updated October 2025</p>
-      <p>Trust is the foundation of every human interaction. From the moment we are born, society records and validates our existence. A name. A birth record. A number. A trail that ties us to the real world.</p>
-      <p>But in the digital realm, this trail is fractured. Governments, corporations, and platforms each hold their own slices of identity — siloed, insecure, and too often influenced by politics, profit, greed, or power.</p>
-      <p><strong>Vericustos changes that.</strong> We are building the world’s first Distributed Trust Platform (DTP) — a neutral, incorruptible, and verifiable ecosystem that extends real-world identity into the digital-first, AI-driven age, and is hardened against tomorrow’s threats using Post-Quantum (PQ) cryptography.</p>
-      <div style="display:flex; gap:10px; margin-top:12px; flex-wrap:wrap">
+      <p>Trust is broken. Not because cryptography failed, but because the systems built around it prioritize profits over prevention, opacity over accountability, and promises over proof.</p>
+      <p>Digital trust today is fractured across governments, corporations, and platforms — each holding fragments of identity in siloed databases, vulnerable to breaches, manipulation, and political pressure. Users can't verify what they're told to trust. Certificate authorities insure against failure rather than prevent it. Quantum computers are harvesting today's encrypted data for tomorrow's attacks.</p>
+      <p><strong>Vericustos changes the equation.</strong> We're building the world's first glass-box Distributed Trust Platform (DTP) — a prevention-first, human-attested trust layer that augments existing PKI without replacing established certificate authority roots. We add verifiable transparency, Guardian consensus governance, and post-quantum cryptography from day one.</p>
+      <p>This is the distributed conscience of digital civilization — where truth proves itself through math, human accountability, and verifiable transparency that no single actor can manipulate.</p>
+      <div style="display:flex; gap:10px; margin-top:16px; flex-wrap:wrap">
         <a class="btn btn-primary" href="#builders">Build with us</a>
         <a class="btn btn-secondary" href="#principles">Read the principles</a>
       </div>
@@ -118,27 +124,81 @@
   <!-- Principles -->
   <section class="section" id="principles">
     <div class="container">
-      <h2>🔑 The Principles of the Vericustos DTP</h2>
+      <h2>🔑 Core Principles of the DTP</h2>
+      <div class="grid cols-3" style="margin-top:16px">
+        <div class="card">
+          <h3>Glass-Box Architecture</h3>
+          <p class="muted">Every function and transaction is inspectable. All trust events are recorded in an append-only transparency log with Merkle proofs and on-chain integrity anchors — never hidden.</p>
+        </div>
+        <div class="card">
+          <h3>Human Attestation Layer</h3>
+          <p class="muted">Licensed professionals (notaries, CPAs, attorneys) anchor high-impact claims. Cryptography verifies; people remain accountable. This bridges digital validity with real-world responsibility.</p>
+        </div>
+        <div class="card">
+          <h3>Post-Quantum Foundation</h3>
+          <p class="muted">NIST-aligned PQC algorithms (ML-DSA, SLH-DSA) from day one — no hybrid compromises. What we protect today remains secure for decades against quantum threats.</p>
+        </div>
+        <div class="card">
+          <h3>Privacy by Design</h3>
+          <p class="muted">Verify claims without exposing personally identifiable information. No silent data collection, no backdoors, no observer access. Proof replaces surveillance.</p>
+        </div>
+        <div class="card">
+          <h3>Real-Time Pause Mode</h3>
+          <p class="muted">Immediate suspension of compromised trust elements without full revocation. Investigate safely, then resume or escalate — containment over damage.</p>
+        </div>
+        <div class="card">
+          <h3>On-Chain Integrity Anchors</h3>
+          <p class="muted">Immutable anchors guarantee historical truth. Attestations and state changes are cryptographically bound — not the data itself, just proof of existence and integrity.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Governance -->
+  <section class="section" id="governance">
+    <div class="container">
+      <h2>🏛️ Guardian Governance: Provably Neutral by Design</h2>
+      <div class="card" style="margin-top:16px">
+        <p><strong>Vericustos operates under a multi-signature Guardian model that ensures no single actor — not governments, corporations, individuals, or even us — can alter or censor records.</strong></p>
+        <ul class="chevrons muted">
+          <li><strong>Distributed consensus:</strong> Independent Attestation Nodes verify, timestamp, and record truth claims across the network.</li>
+          <li><strong>Multi-sig controls:</strong> All governance actions require Guardian consensus with cryptographic verification and public audit trails.</li>
+          <li><strong>Emergency actions:</strong> Time-bound, transparent scope requiring multi-party agreement for any system-wide changes.</li>
+          <li><strong>Immune to pressure:</strong> Architecture prevents political, financial, or ideological manipulation of truth records.</li>
+        </ul>
+        <p style="margin-top:12px">This ensures Vericustos remains provably neutral. <strong>No government. No corporation. No person.</strong> Only verifiable consensus — the world's first cryptographically enforced neutral trust platform where rules govern rulers, not the reverse.</p>
+        <p class="muted" style="margin-top:12px; border-top:1px solid rgba(255,255,255,.08); padding-top:12px">
+          Even if one node, organization, or government is compromised, truth remains verifiable everywhere else. The system is designed to survive partial failure while maintaining integrity.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- The Orb -->
+  <section class="section" id="orb">
+    <div class="container">
+      <h2>🪩 The Trust Orb: Universal Signal of Truth</h2>
       <div class="grid cols-2" style="margin-top:16px">
         <div class="card">
-          <h3>Human Anchoring</h3>
-          <p class="muted">Every entry into the DTP begins with licensed, accountable professionals — notaries, CPAs, lawyers, doctors, auditors. Trust starts at the human level and extends outward.</p>
+          <h3>What is the Orb?</h3>
+          <p class="muted">The Trust Orb represents each identity, entity, or attested system inside the Vericustos DTP. It visually and programmatically conveys trust state in real time — making trust visible, measurable, and accountable.</p>
+          <ul class="chevrons muted">
+            <li>🟢 <strong>Trusted:</strong> All verifications pass, attestation chain intact</li>
+            <li>🟡 <strong>Paused:</strong> Temporarily suspended during investigation</li>
+            <li>🔴 <strong>Revoked:</strong> Permanently invalidated due to confirmed compromise</li>
+          </ul>
+          <p class="muted" style="margin-top:10px">The Orb bridges human judgment and machine verifiability — a universal truth signal that transcends technical complexity.</p>
         </div>
         <div class="card">
-          <h3>Prevention at the Gate</h3>
-          <p class="muted">Requests pass human verification first, then AI scans for anomalies before the first certificate is issued. Suspicious requests are paused to prevent fraud at the edge.</p>
-        </div>
-        <div class="card">
-          <h3>AI Vigilance</h3>
-          <p class="muted">Continuous monitoring detects unusual patterns across the ecosystem. Anomalies trigger investigation faster than legacy systems.</p>
-        </div>
-        <div class="card">
-          <h3>Rapid Containment</h3>
-          <p class="muted">Compromises are isolated in near real time, protecting the rest of the DTP. Every action is publicly logged as proof without exposing personal details.</p>
-        </div>
-        <div class="card" style="grid-column:1 / -1">
-          <h3>Transparent Proof</h3>
-          <p class="muted">Issuance, validation, and containment are anchored cryptographically. They cannot be altered, erased, or hidden. Vericustos anchors proofs of trust events — not personal data. Proof replaces blind trust.</p>
+          <h3>Orb Capabilities</h3>
+          <ul class="chevrons muted">
+            <li><strong>Cryptographically bound:</strong> Each Orb is tied to PQ signatures and human attestations</li>
+            <li><strong>Real-time status:</strong> Reflects current trust state across all verifiers (target: <2min propagation)</li>
+            <li><strong>SDK integration:</strong> Embeddable via widgets, APIs, and programmatic controls</li>
+            <li><strong>Pause/Resume/Verify:</strong> Self-service controls through dashboard, CLI, or SDK</li>
+            <li><strong>Transparency:</strong> All state changes logged to DTP Ledger with Merkle proofs</li>
+          </ul>
+          <p class="muted" style="margin-top:10px">Build the Orb into your applications to make trust visible — from authentication flows to content provenance verification.</p>
         </div>
       </div>
     </div>
@@ -149,29 +209,51 @@
     <div class="container">
       <h2>🛡️ Prevention Over Payout</h2>
       <div class="card" style="margin-top:16px">
-        <p>Legacy Certificate Authorities (CAs) rely on insurance and financial guarantees to offset the damage caused by compromised or misissued certificates. They treat failure as inevitable — a cost of doing business.</p>
-        <p><strong>Vericustos takes a different path.</strong> We focus not on paying for trust after it breaks, but on preventing failure in the first place. Every process — from human attestation and AI-driven anomaly detection to rapid containment and verifiable transparency — is built to stop incidents before they spread.</p>
-        <p><strong>Containment measures pay for themselves many times over.</strong> By neutralizing threats before they escalate, Vericustos avoids the enormous financial losses, reputational harm, and years of litigation that plague traditional insurers and legacy CAs.</p>
-        <p>Instead of underwriting risk, we eliminate it through operational discipline and cryptographic assurance. This is our moat — a prevention-first trust model that replaces reaction with resilience.</p>
+        <p>Legacy Certificate Authorities rely on insurance and financial guarantees to offset damage from compromised or misissued certificates. They treat failure as inevitable — a cost of doing business, averaged across millions of certificates and backed by underwriters who profit from the status quo.</p>
+        <p><strong>Vericustos takes a fundamentally different path.</strong> We focus not on paying for trust after it breaks, but on preventing failure before it happens:</p>
+        <ul class="chevrons muted">
+          <li><strong>Human verification first:</strong> Licensed professionals anchor high-impact attestations before cryptographic binding</li>
+          <li><strong>AI vigilance:</strong> Continuous monitoring via Attestation Nodes detects anomalies faster than manual review</li>
+          <li><strong>Prevention at the gate:</strong> Suspicious requests are paused before binding to the DTP</li>
+          <li><strong>Rapid containment:</strong> Compromises isolated in minutes (target: <15min global propagation) via Pause Mode</li>
+          <li><strong>Guardian oversight:</strong> Multi-sig consensus prevents single-point failures or manipulation</li>
+        </ul>
+        <p style="margin-top:12px"><strong>Prevention isn't just morally superior — it's economically rational.</strong> By neutralizing threats before they spread, Vericustos avoids the enormous financial losses ($4.5M average breach cost), reputational harm, and years of litigation that plague traditional models.</p>
+        <p>Instead of underwriting risk through insurance policies, we eliminate it through operational discipline, cryptographic assurance, and verifiable transparency. This is our moat — a prevention-first trust model that replaces reaction with resilience.</p>
       </div>
     </div>
   </section>
 
-  <!-- Pause Mode (new) -->
+  <!-- Pause Mode -->
   <section class="section" id="pause">
     <div class="container">
-      <h2>⏸️ Pause Mode — Self-Service Safety Without Immediate Revocation</h2>
+      <h2>⏸️ Pause Mode — Safety Without Re-Issuance</h2>
       <div class="card" style="margin-top:16px">
-        <p><strong>Sometimes you need to hit pause — not destroy keys.</strong> Vericustos introduces <em>Pause Mode</em>, a first-of-its-kind, self-service control that lets certificate owners temporarily suspend trust without revoking the certificate.</p>
-        <ul class="chevrons muted">
-          <li><strong>Planned downtime:</strong> Going offline for maintenance or travel? Pause your cert to reduce attack surface.</li>
-          <li><strong>Investigations:</strong> Suspect compromise? Enter Pause Mode to block live use while you assess, without burning your identity or trust history.</li>
-          <li><strong>Instant status flip:</strong> The Vericustos DTP and Orb reflect <em>Paused</em> across verifiers with near-real-time propagation (designed for sub-10 seconds; conservative upper bound ~1 minute).</li>
-          <li><strong>Reversible by design:</strong> Unpause to restore normal operation, or escalate to <em>Revoke</em> if compromise is confirmed.</li>
-          <li><strong>API & SDK native:</strong> Trigger Pause/Unpause via dashboard, CLI, or SDK; all actions are anchored to the transparency log.</li>
-          <li><strong>No PII exposure:</strong> Only state changes and proofs are published — never private data.</li>
-        </ul>
-        <p class="muted" style="margin-top:10px">Pause Mode turns “containment first” into a practical control: a safer default that prevents spread while preserving options.</p>
+        <p><strong>Hit pause when in doubt — without destroying keys.</strong> Vericustos introduces <em>Pause Mode</em>, a first-of-its-kind self-service control that lets attestation holders temporarily suspend trust without permanent revocation.</p>
+        <div class="grid cols-2" style="margin-top:16px">
+          <div>
+            <h3>Use Cases</h3>
+            <ul class="chevrons muted">
+              <li><strong>Planned downtime:</strong> Reduce attack surface during maintenance or travel</li>
+              <li><strong>Investigations:</strong> Block use while assessing suspected compromise without losing identity history</li>
+              <li><strong>Precautionary:</strong> Pause proactively during high-risk periods or security incidents</li>
+              <li><strong>Testing:</strong> Validate monitoring and alerting without permanent consequences</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Technical Benefits</h3>
+            <ul class="chevrons muted">
+              <li><strong>Near-instant propagation:</strong> Status reflects across verifiers in <2 minutes (target)</li>
+              <li><strong>Reversible:</strong> Unpause to restore or escalate to Revoke if compromise confirmed</li>
+              <li><strong>Preserves chains:</strong> No re-issuance overhead or lost trust history</li>
+              <li><strong>API-native:</strong> Trigger via dashboard, CLI, or SDK with logged proofs</li>
+              <li><strong>Privacy-preserving:</strong> Only state changes published, never PII</li>
+            </ul>
+          </div>
+        </div>
+        <p class="muted" style="margin-top:16px; border-top:1px solid rgba(255,255,255,.08); padding-top:12px">
+          Pause Mode turns "containment first" into a practical control. It's the safer default for journalists in hostile regions, activists under surveillance, or enterprises investigating anomalies — preventing spread while preserving options.
+        </p>
       </div>
     </div>
   </section>
@@ -181,18 +263,86 @@
     <div class="container">
       <h2>🔐 Post-Quantum Security</h2>
       <div class="card" style="margin-top:16px">
-        <p>In 2025, new international standards for Post-Quantum cryptography were officially announced. Governments and major organizations around the world are transitioning to defend against future quantum threats — especially the growing risk of “harvest now, decrypt later” attacks.</p>
-        <p><strong>Vericustos is moving full steam ahead with these standards from day one.</strong> Every certificate we issue is built to remain trustworthy not just for years, but for decades.</p>
+        <p>In 2024, NIST finalized post-quantum cryptography standards (FIPS 204, 205, 206) to defend against quantum threats — especially "harvest now, decrypt later" attacks where adversaries capture encrypted data today to decrypt once quantum computers mature.</p>
+        <p><strong>Vericustos implements pure post-quantum cryptography from day one:</strong></p>
+        <ul class="chevrons muted">
+          <li><strong>ML-DSA (FIPS 204):</strong> Primary signature algorithm for content attestations and binding operations</li>
+          <li><strong>SLH-DSA (FIPS 205):</strong> Stateless hash-based signatures for Guardian control plane operations</li>
+          <li><strong>No hybrid mode:</strong> Pure PQ prevents downgrade attacks and simplifies security analysis</li>
+          <li><strong>NIST-aligned:</strong> Adherence to federal standards ensures interoperability and future-proofing</li>
+          <li><strong>Forward compatibility:</strong> Architecture supports algorithm rotation as standards evolve</li>
+        </ul>
+        <p style="margin-top:12px">Every attestation we bind to the DTP is built to remain trustworthy not just for years, but for decades — protecting against both current threats and future quantum capabilities that could break today's RSA and ECDSA signatures.</p>
       </div>
       <div class="card" style="margin-top:16px">
-        <h3>Future Universality</h3>
+        <h3>Universal Coverage</h3>
+        <p class="muted">Vericustos is designed for universal applicability across trust domains:</p>
         <ul class="chevrons muted">
-          <li>People — proofs of birth, education, professional milestones — without exposing PII</li>
-          <li>Businesses — incorporation, compliance, legitimacy</li>
-          <li>Devices — manufacturing origin, ownership, safety</li>
-          <li>Artificial Intelligence — provenance and accountability</li>
+          <li><strong>People:</strong> Birth records, education credentials, professional milestones — verified without exposing PII</li>
+          <li><strong>Businesses:</strong> Incorporation, compliance attestations, supply chain legitimacy</li>
+          <li><strong>Devices:</strong> Manufacturing origin, ownership transfers, safety certifications for IoT</li>
+          <li><strong>Artificial Intelligence:</strong> Model provenance, training data attestations, output accountability</li>
         </ul>
-        <p class="muted">Vericustos is not influenced by governments, corporations, or individuals. We are the platform and trust ecosystem — not the gatekeeper. Identities exist independently of us, and their validity lives in a distributed, transparent ledger accessible to everyone for verification.</p>
+        <p class="muted" style="margin-top:12px">Vericustos is not influenced by governments, corporations, or individuals. We are the platform — not the gatekeeper. Identities exist independently of us, and their validity lives in a distributed, transparent ledger accessible to everyone for verification.</p>
+      </div>
+    </section>
+
+  <!-- Architecture -->
+  <section class="section" id="architecture">
+    <div class="container">
+      <h2>🧱 System Architecture</h2>
+      <p class="lead">The Vericustos DTP consists of six core components working together to create verifiable, distributed trust:</p>
+      <div class="grid cols-3" style="margin-top:16px">
+        <div class="card">
+          <h3>DTP Ledger</h3>
+          <p class="muted">Purpose-built, append-only distributed ledger optimized for attestation and trust proofs — not a general blockchain, but a specialized transparency log with Merkle tree structures.</p>
+        </div>
+        <div class="card">
+          <h3>Attestation Nodes</h3>
+          <p class="muted">Independently verify, timestamp, and record truth claims from licensed professionals and automated systems. Provide inclusion and consistency proofs for audit.</p>
+        </div>
+        <div class="card">
+          <h3>Guardian Layer</h3>
+          <p class="muted">Enforces immutable system rules and emergency controls through multi-signature consensus. All governance actions logged and publicly auditable.</p>
+        </div>
+        <div class="card">
+          <h3>Orb SDK / API</h3>
+          <p class="muted">Connects human attestations, services, and systems with simple, auditable interfaces. Embed trust signals and enforce state across applications.</p>
+        </div>
+        <div class="card">
+          <h3>Pause Infrastructure</h3>
+          <p class="muted">Global propagation of Pause/Resume states with verifiable timestamps. Enables any attestation, key, or certificate to be suspended in <2 minutes (target).</p>
+        </div>
+        <div class="card">
+          <h3>Augmentation Layer</h3>
+          <p class="muted">Binds human attestations to existing certificates and keys — no new PKI roots required. Adds transparency to legacy infrastructure without replacement.</p>
+        </div>
+      </div>
+      <p class="muted" style="margin-top:16px">This architecture ensures that even if one node, organization, or government is compromised, truth remains verifiable everywhere else. The system is designed for Byzantine fault tolerance and graceful degradation.</p>
+    </div>
+  </section>
+
+  <!-- Philosophy -->
+  <section class="section" id="philosophy">
+    <div class="container">
+      <h2>💠 Philosophy of Trust</h2>
+      <div class="card" style="margin-top:16px">
+        <p><strong>Who can people trust?</strong> People should use their own innate senses on who to trust or not.</p>
+        <p>Vericustos is not a gatekeeper of truth. It is a platform of verifiable transparency — a digital mirror where truth proves itself through math, human accountability, consensus, and open attestation that anyone can audit.</p>
+        <div class="grid cols-2" style="margin-top:16px">
+          <div>
+            <h3>Distributed Conscience</h3>
+            <p class="muted">The DTP levels the trust playing field for everyone — from governments securing critical infrastructure to journalists protecting sources under authoritarian regimes.</p>
+            <p class="muted">We empower enterprises preventing supply chain fraud, NGOs operating in zero-trust regions, activists verifying identity without surveillance, and individuals demanding privacy-preserving verification.</p>
+          </div>
+          <div>
+            <h3>End of Opaque Authority</h3>
+            <p class="muted">This is the end of opaque authority and the beginning of accountable trust. Prevention-first resilience (sub-15min containment SLAs), glass-box transparency (all actions inspectable), and privacy-by-design (no backdoors, no silent collection).</p>
+            <p class="muted">Guardian governance ensures no single source of truth can lie unchecked. On-chain anchors make history immutable. The Orb makes trust visible.</p>
+          </div>
+        </div>
+        <p style="margin-top:16px; padding-top:16px; border-top:1px solid rgba(255,255,255,.08)"><strong>This is where cryptography meets conscience:</strong> A world where trust is earned, measured, and provable — not assumed. Where verification doesn't require exposure. Where truth is universal but power is distributed.</p>
+        <p class="muted">Vericustos stands as the distributed conscience of digital civilization — humanity's immune system against manipulated reality.</p>
       </div>
     </div>
   </section>
@@ -200,12 +350,36 @@
   <!-- Vision -->
   <section class="section" id="vision">
     <div class="container">
-      <h2>🚀 The Vision</h2>
+      <h2>🚀 The Vision: Trust as Infrastructure for Civilization</h2>
+      <p class="lead">We envision a world where digital trust is as fundamental and universal as roads, electricity, or the internet itself.</p>
       <div class="grid cols-2" style="margin-top:16px">
-        <div class="card"><h3>From Birth to Digital Life</h3><p class="muted">When a hospital is Vericustos-certified, the proof of a birth record can be anchored into the DTP — creating a verifiable digital marker that lasts across borders and lifetimes.</p></div>
-        <div class="card"><h3>Business Without Borders</h3><p class="muted">A company registers once, and its legitimacy is verifiable globally without intermediaries.</p></div>
-        <div class="card"><h3>Trusted Machines</h3><p class="muted">A device rolls off the factory line with a Vericustos ID that proves it was built as claimed, not counterfeited.</p></div>
-        <div class="card"><h3>Accountable AI</h3><p class="muted">An AI model publishes outputs with a chain of trust that transparently traces back to its creation and validators.</p></div>
+        <div class="card">
+          <h3>From Birth to Digital Life</h3>
+          <p class="muted">When a hospital binds a birth record to the DTP, it creates a verifiable digital marker that lasts across borders and lifetimes — anchoring human identity without exposing personal details.</p>
+        </div>
+        <div class="card">
+          <h3>Business Without Borders</h3>
+          <p class="muted">A company registers once, and its legitimacy is verifiable globally without intermediaries, per-country bureaucracy, or costly re-verification processes.</p>
+        </div>
+        <div class="card">
+          <h3>Trusted Machines</h3>
+          <p class="muted">A device rolls off the factory line with a Vericustos-attested ID proving it was built as claimed — not counterfeited, not tampered with — essential for critical infrastructure.</p>
+        </div>
+        <div class="card">
+          <h3>Accountable AI</h3>
+          <p class="muted">An AI model publishes outputs with a chain of trust transparently tracing back to its creation, training data provenance, and human validators — combating deepfakes at scale.</p>
+        </div>
+        <div class="card">
+          <h3>Journalists Under Threat</h3>
+          <p class="muted">Reporters in hostile regions prove their identity and content authenticity without revealing location, compromising sources, or relying on centralized platforms.</p>
+        </div>
+        <div class="card">
+          <h3>Supply Chain Integrity</h3>
+          <p class="muted">Every component, every transfer, every custody change — verifiable end-to-end without proprietary databases, trust-me intermediaries, or paper trails that can be forged.</p>
+        </div>
+      </div>
+      <div class="card" style="margin-top:18px; background:linear-gradient(135deg,rgba(134,247,209,.08),rgba(106,160,255,.08))">
+        <p style="margin:0"><strong>Market focus:</strong> Governments, enterprises, journalists, NGOs, open-source networks, compliance frameworks, and individuals who demand verifiable truth. Mission-critical use cases where trust failures cost lives, liberty, or billions in damages — and where prevention matters more than insurance payouts.</p>
       </div>
     </div>
   </section>
@@ -213,13 +387,36 @@
   <!-- Verification without exposure -->
   <section class="section" id="verify">
     <div class="container">
-      <h2>🧩 How Vericustos Verifies Without Exposure</h2>
+      <h2>🧩 Verification Without Exposure</h2>
       <div class="card" style="margin-top:16px">
-        <p><strong>Vericustos proves authenticity without ever revealing private information.</strong> When a licensed professional — such as a notary, CPA, or attorney — verifies an individual or organization, they generate a digital attestation confirming the verification.</p>
-        <p>Vericustos then validates that attestation and issues a <strong>Vericustos-backed Post-Quantum certificate</strong> — a cryptographic proof that the verification took place, without exposing any personally identifiable information.</p>
-        <p>When that certificate is used, the holder must demonstrate <em>proof of possession</em> by signing a real-time challenge with their private key. The DTP checks that the signature matches the public key, that the certificate is valid and not revoked, and that the attestation chain remains intact and verifiable.</p>
-        <p>If anyone tries to copy or claim a certificate hash, it’s useless without the private key. The DTP and the Vericustos Orb detect any mismatch or revoked status instantly and mark it untrusted.</p>
-        <p>This model keeps verification human-anchored and issuance cryptographic — proving truth without exposure and trust without surveillance.</p>
+        <p><strong>Vericustos proves authenticity without ever revealing private information.</strong> This is the core of our privacy-by-design philosophy.</p>
+        <h3 style="margin-top:16px">How It Works:</h3>
+        <div class="grid cols-2" style="margin-top:12px">
+          <div>
+            <p><strong>1. Human Verification</strong></p>
+            <p class="muted">A licensed professional (notary, CPA, attorney, or other credentialed verifier) validates an individual or organization and generates a digital attestation confirming the verification occurred.</p>
+          </div>
+          <div>
+            <p><strong>2. Transparency Binding</strong></p>
+            <p class="muted">Vericustos validates that attestation and binds it to existing certificates/keys via the DTP — augmenting them with post-quantum cryptographic proofs and on-chain integrity anchors.</p>
+          </div>
+          <div>
+            <p><strong>3. Proof of Possession</strong></p>
+            <p class="muted">When used, holders prove possession by signing a real-time challenge with their private key. The DTP checks signature validity, attestation chain integrity, and current Orb state.</p>
+          </div>
+          <div>
+            <p><strong>4. Real-Time Verification</strong></p>
+            <p class="muted">Verifiers check freshness requirements, inclusion/consistency proofs from the transparency log, and Guardian-signed checkpoints — all without accessing private data.</p>
+          </div>
+        </div>
+        <p style="margin-top:16px"><strong>Key Security Properties:</strong></p>
+        <ul class="chevrons muted">
+          <li>Copying an attestation is useless without the corresponding private key</li>
+          <li>The DTP and Orb detect mismatches, expired freshness, or paused/revoked status instantly</li>
+          <li>All verifications are logged with Merkle proofs but never contain PII</li>
+          <li>Human accountability (attester identity) paired with cryptographic validity (signature checks)</li>
+        </ul>
+        <p style="margin-top:12px"><strong>This model keeps verification human-anchored and validation cryptographic</strong> — proving truth without exposure, trust without surveillance, and accountability without centralized control. We augment your existing PKI with glass-box transparency, not new roots.</p>
       </div>
     </div>
   </section>
@@ -230,44 +427,73 @@
       <div class="card" style="display:grid;grid-template-columns:1.2fr 1fr;gap:20px;align-items:center">
         <div>
           <h2>🧠 Empowering Builders of the Next Trust Era</h2>
-          <p class="lead">Trust is not a product. It is an ecosystem — and ecosystems grow when builders have tools.</p>
+          <p class="lead">Trust is not a product. It is an ecosystem — and ecosystems grow when builders have the right tools to augment PKI with verifiable transparency.</p>
           <ul class="chevrons muted">
-            <li>Issue and verify Post-Quantum certificates that meet the latest international standards.</li>
-            <li>Interact with the Vericustos Orb — a persistent trust indicator for authenticity and provenance.</li>
-            <li>Anchor and verify attestations, transactions, or AI outputs — trusted for decades.</li>
-            <li>Programmatic <strong>Pause/Unpause</strong> and <strong>Revoke</strong> controls via SDK, CLI, and dashboard.</li>
+            <li>Bind and verify post-quantum attestations that meet NIST standards — no new roots required</li>
+            <li>Integrate the Vericustos Orb as a persistent, embeddable trust indicator across applications</li>
+            <li>Read transparency checkpoints and on-chain anchors for independent audit</li>
+            <li>Anchor claims, transactions, or AI outputs to the DTP — trusted for decades</li>
+            <li>Programmatic <strong>Pause/Resume</strong> and <strong>Revoke</strong> controls via SDK, CLI, and dashboard</li>
           </ul>
-          <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:8px">
+          <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:12px">
             <a class="btn btn-primary" href="#">Get the SDK</a>
             <a class="btn btn-secondary" href="#">Read the docs</a>
           </div>
+          <p class="muted small" style="margin-top:10px">JavaScript • TypeScript • Python • Go • CLI • CI/CD actions</p>
         </div>
         <div class="card" style="background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.02));border:1px dashed rgba(255,255,255,.12)">
           <div class="pill" aria-hidden="true">Sample verify call</div>
 <pre style="margin:10px 0 0; white-space:pre-wrap; color:#d7e3f7"><code>// Pseudocode
-const cert = await vc.fetchCertificate(id)
-const ok = await vc.verify({ cert, challenge: nonce })
-if (ok && cert.status === 'valid') orb.show('trusted')
-else orb.show('untrusted')</code></pre>
+const att = await vc.fetchAttestation(id)
+const chk = await vc.fetchCheckpoint()
+const ok = await vc.verify({ 
+  attestation: att, 
+  checkpoint: chk, 
+  challenge: nonce 
+})
+if (ok && att.state === 'trusted') 
+  orb.show('trusted')
+else if (att.state === 'paused') 
+  orb.show('paused')
+else 
+  orb.show('revoked')</code></pre>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- Closing -->
+  <section class="section">
+    <div class="container">
+      <div class="card" style="background:linear-gradient(135deg,rgba(134,247,209,.08),rgba(106,160,255,.08)); text-align:center; padding:32px">
+        <h2 style="margin:0 0 12px">The Beginning of Accountable Trust</h2>
+        <p class="motto" style="margin:0 0 16px">"Then you will know the truth, and the truth will set you free."</p>
+        <p style="margin:0 0 16px">Vericustos stands as the distributed conscience of digital civilization — a system where truth proves itself through verifiable mathematics, where accountability is cryptographic, and where no single source of truth can ever again lie unchecked.</p>
+        <p style="margin:0"><strong>This is the end of opaque authority. This is the beginning of accountable trust.</strong></p>
+      </div>
+    </div>
+  </section>
+
   <!-- Footer -->
-  <footer class="footer" role="contentinfo">
+  <footer class="footer">
     <div class="container footer-grid">
       <div>
         <h4>Vericustos</h4>
-        <p class="small muted">A futuristic digital trust fabric. Distributed. Immutable. Human-anchored and quantum-resistant.</p>
+        <p class="small muted">
+          Distributed trust for people, devices, and AI. Prevention over payout. Transparent by design. Post-quantum from day one. Augments, not replaces, your CAs.<br/>
+          <em>"Then you will know the truth, and the truth will set you free."</em>
+        </p>
       </div>
       <div>
         <h4>Navigate</h4>
         <div class="small">
           <a href="#principles">Principles</a><br/>
+          <a href="#governance">Governance</a><br/>
+          <a href="#orb">The Orb</a><br/>
           <a href="#prevention">Prevention</a><br/>
           <a href="#pause">Pause Mode</a><br/>
           <a href="#pq">PQ Security</a><br/>
+          <a href="#philosophy">Philosophy</a><br/>
           <a href="producer.html">Producer</a>
         </div>
       </div>
@@ -276,16 +502,15 @@ else orb.show('untrusted')</code></pre>
         <div class="small">
           <a href="#builders">Developers</a><br/>
           <a href="#">Status</a><br/>
-          <a href="/cdn-cgi/l/email-protection#cea7a0a8a18eb8abbca7adbbbdbaa1bde0ada1a3"><span class="__cf_email__" data-cfemail="d7beb9b1b897a1b2a5beb4a2a4a3b8a4f9b4b8ba">[email&#160;protected]</span></a>
+          <a href="mailto:info@vericustos.com">info@vericustos.com</a>
         </div>
       </div>
     </div>
     <div class="container" style="margin-top:12px">
-      <div class="muted small">© 2025 Vericustos Inc. All rights reserved.</div>
+      <div class="muted small">© 2025 Vericustos Inc. All rights reserved. • Where cryptography meets conscience.</div>
     </div>
   </footer>
 
-  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
   <script>
     // Mobile navigation toggle
     const navToggle = document.getElementById('navToggle');
@@ -295,7 +520,7 @@ else orb.show('untrusted')</code></pre>
       navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
     });
 
-    // Smooth scroll for hash links only
+    // Smooth scroll for hash links
     document.querySelectorAll('a[href^="#"]').forEach(a => {
       a.addEventListener('click', (e) => {
         const id = a.getAttribute('href');
